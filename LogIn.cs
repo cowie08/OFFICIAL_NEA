@@ -33,6 +33,8 @@ namespace OFFICIAL_NEA
             Account account = new Account();
             account.Show();
             this.Close();
+
+            //exit btn
         }
 
         private void login_confirm_btn_Click(object sender, EventArgs e)
@@ -73,11 +75,14 @@ namespace OFFICIAL_NEA
                         MainMenu mainMenu = new MainMenu(LoggedInUserId);
                         mainMenu.Show();
                         this.Close();
+
+                        //if user successfully logs in they are proceeded to the main menu screen
                     }
 
                     else 
                     {
                         MessageBox.Show("Invalid Log In (TRY AGAIN)");
+                        // user has not enter correct or valid detials
 
                     }
 
@@ -91,6 +96,11 @@ namespace OFFICIAL_NEA
 
 
 
+
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
 
         }
     }

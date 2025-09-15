@@ -25,6 +25,10 @@ namespace OFFICIAL_NEA
         {
             InitializeComponent();
             this.userId = userId;
+
+            // Allows for current user to be remembered for ticket history
+
+
         }
 
         private void LogIn_button_Click(object sender, EventArgs e)
@@ -37,6 +41,8 @@ namespace OFFICIAL_NEA
 
             this.Hide();
 
+            //opens login form
+
 
 
         }
@@ -46,7 +52,7 @@ namespace OFFICIAL_NEA
             SignUp signUp = new SignUp();
             signUp.Show();
             this.Hide();
-
+            //opens sign up form
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -62,6 +68,8 @@ namespace OFFICIAL_NEA
         private void close_program_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+            //closes program
         }
     }
 }

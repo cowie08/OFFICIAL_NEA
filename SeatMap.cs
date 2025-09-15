@@ -28,6 +28,7 @@ namespace OFFICIAL_NEA
             this.matchid = Match_Id;
             this.userid = userid;
             this.Load += SeatMap_Load;
+            // checks if seatmap is displayed otherwise program will not funciton properly 
 
 
             
@@ -49,12 +50,12 @@ namespace OFFICIAL_NEA
 
             PictureBox stadium = new PictureBox
             {
-                Image = Image.FromFile("C:\\Users\\theco\\source\\repos\\simon\\OFFICIAL_NEA\\Resources\\emiratesstadiumseatingchart.jpg"),
+                Image = Properties.Resources.emiratesstadiumseatingchart,
                 SizeMode = PictureBoxSizeMode.StretchImage,
                 Dock = DockStyle.Fill
 
 
-
+                // shows visually the stadium map to user 
 
             };
 
@@ -88,7 +89,7 @@ namespace OFFICIAL_NEA
                     int toprow = 30;
                     int bottomrow = 190;
                     
-
+                    // positioning the buttons on the image
                     
 
                     while (reader.Read())
@@ -145,7 +146,7 @@ namespace OFFICIAL_NEA
                         seatIndex++;
 
 
-
+                        // shows the price of seat,seat row and number as well as if seat is available 
 
                     }
 
@@ -185,7 +186,7 @@ namespace OFFICIAL_NEA
 
 
 
-
+            // sets the colours of the btns e.g if sold = gray
 
 
         }
@@ -198,6 +199,8 @@ namespace OFFICIAL_NEA
             {
                 MessageBox.Show("You MUST select a seat to confirm a booking!");
                 return;
+
+                // if user tries to confirm a booking without clicking a seat 
             
             }
             var seatTag =(Tuple<int,decimal,string>)selectseatbtn.Tag;
@@ -233,6 +236,8 @@ namespace OFFICIAL_NEA
                     {
                         command1.Parameters.AddWithValue("@seatId", seatId);
                         command1.ExecuteNonQuery();
+
+                    //updates databse so ticket is no longer available 
                     
                     }
 
@@ -244,7 +249,7 @@ namespace OFFICIAL_NEA
 
                 this.Close();
 
-
+                // if user successfuly pruchases a ticket user is then shown back to main menu
 
                 
             
@@ -257,6 +262,8 @@ namespace OFFICIAL_NEA
             BuyTickets buytickets = new BuyTickets(userid);
             buytickets.Show();
             this.Close();
+
+            //exit btn
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

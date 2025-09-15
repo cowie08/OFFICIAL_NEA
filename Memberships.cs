@@ -29,7 +29,7 @@ namespace OFFICIAL_NEA
 
         private void grpbx_currentMembeships_Enter(object sender, EventArgs e)
         {
-            lbl
+            
         }
 
         private void btn_platinum_Click(object sender, EventArgs e)

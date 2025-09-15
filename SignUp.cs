@@ -37,6 +37,7 @@ namespace OFFICIAL_NEA
             account.Show();
             this.Close();
 
+            //exit btn
         }
 
         private void login_confirm_btn_Click(object sender, EventArgs e)
@@ -57,6 +58,8 @@ namespace OFFICIAL_NEA
             {
                 MessageBox.Show("To create an account successfully all fields must be filled in!");
                 return;
+
+                //checks if all txtboxes have been filled
             
             
             }
@@ -64,14 +67,14 @@ namespace OFFICIAL_NEA
             {
                 MessageBox.Show("Password do not match");
                 return;
-            
+            //checks if confirm password is the same a password
             }
 
             if (!ValidEmailCheck(email))
             {
                 MessageBox.Show("Invalid email format");
                 return;
-            
+            // checks if email is valid
             }
 
             
@@ -108,6 +111,8 @@ namespace OFFICIAL_NEA
                         {
                             MessageBox.Show("This username has already been taken!!");
                             return;
+
+                            //checks if a user with that username exists already
                         }
 
 
@@ -150,6 +155,8 @@ namespace OFFICIAL_NEA
                     Account account = new Account(newUserId);
                     account.Show();
 
+                    // adds account into database
+
                 }
 
 
@@ -168,6 +175,8 @@ namespace OFFICIAL_NEA
                     {
                         MessageBox.Show("A databse error has occured: " + ex.Message);
 
+                        // an unexplained error has happened 
+
                     }
 
                 }
@@ -184,7 +193,7 @@ namespace OFFICIAL_NEA
         string email_format = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
         return Regex.IsMatch(email, email_format);
 
-
+        //REGEX is used to see if string pattern matches the so the users email is inputted correclty 
         }
         
 

@@ -134,6 +134,7 @@
             this.Controls.Add(this.login_groupBox1);
             this.Name = "LogIn";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.login_groupBox1.ResumeLayout(false);
             this.login_groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

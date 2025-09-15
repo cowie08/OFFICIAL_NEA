@@ -17,6 +17,8 @@ namespace OFFICIAL_NEA
         {
             InitializeComponent();
             this.LoggedInUserId = userId;
+
+            //another variable used to remember the current user logged in main use (ticket history)
         }
 
         private void login_exit_btn_Click(object sender, EventArgs e)
@@ -24,6 +26,7 @@ namespace OFFICIAL_NEA
             Account account = new Account();
             account.Show();
             this.Close();
+            //exit btn
         }
 
         private void buyTickets_btn_Click(object sender, EventArgs e)
@@ -33,6 +36,8 @@ namespace OFFICIAL_NEA
             BuyTickets buytickets = new BuyTickets(LoggedInUserId);
             buytickets.Show();
             this.Close();
+
+            //allows user access to buy tickets
             
 
         }
@@ -42,6 +47,8 @@ namespace OFFICIAL_NEA
             TicketigHisotr ticketigHisotr = new TicketigHisotr(LoggedInUserId);
             ticketigHisotr.Show();
             this.Close();
+
+            //allows user access to ticket history
         }
 
         private void Membership_btn_Click(object sender, EventArgs e)
@@ -49,6 +56,13 @@ namespace OFFICIAL_NEA
             Memberships memberships = new Memberships();
             memberships.Show();
             this.Close();
+
+            //access to membership form
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,6 +51,7 @@ namespace OFFICIAL_NEA
             dataGridView_matches.Columns["opponent"].HeaderText = "Opponent";
             dataGridView_matches.Columns["Game_Type"].HeaderText = "Game Type";
             
+            // improves the design of the datagridview to make it more realsitic 
 
 
         }
@@ -73,6 +74,8 @@ namespace OFFICIAL_NEA
                         da.Fill(dataTable);
                         dataGridView_matches.DataSource = dataTable;
 
+                        // gets all info from database and puts into a datatable for the user to see and select a match they want to buy tickets for
+
                     }
 
 
@@ -87,6 +90,7 @@ namespace OFFICIAL_NEA
             catch(Exception ex)  
             {
                 MessageBox.Show("Error loading all the matches " + ex.Message);
+                // unknown error
             }
 
 
@@ -105,10 +109,14 @@ namespace OFFICIAL_NEA
                 seatMap.Show();
                 this.Close();
 
+                // allows user once clicked on a match from datatbale to confirm and then load to seatmap form 
+
             }
             else
             {
                 MessageBox.Show("Please select a different match: we are experiencing technical issues");
+
+                //error with databse laoidng normally due to tehcnical issues with seatmap
             }
 
 
@@ -121,6 +129,8 @@ namespace OFFICIAL_NEA
             MainMenu mainMenu = new MainMenu(LoggedInUserId);
             mainMenu.Show();
             this.Close();
+
+            //exit btn
         }
     }
 }

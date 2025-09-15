@@ -20,6 +20,8 @@ namespace OFFICIAL_NEA
             InitializeComponent();
             this.userid = userId;
             this.Load += Ticketinghistory_Load;
+
+            //takes the current logged in user before loading
         }
 
         private void Ticketinghistory_Load(object sender, EventArgs e)
@@ -45,6 +47,8 @@ namespace OFFICIAL_NEA
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
+                    //colects user data like seatnum and store it in a datatable
+
 
                     dgv_Ticket_History.DataSource = dt;
                 }
@@ -65,6 +69,8 @@ namespace OFFICIAL_NEA
             dgv_Ticket_History.Columns["opponent"].HeaderText = "Opponent";
             dgv_Ticket_History.Columns["Date_Purchase"].HeaderText = "Purchased On";
 
+            //Tidies up the table to look nicer
+
         }
 
 
@@ -82,6 +88,8 @@ namespace OFFICIAL_NEA
             MainMenu mainMenu = new MainMenu(userid);
             mainMenu.Show();
             this.Close();
+
+            //ext btn
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
