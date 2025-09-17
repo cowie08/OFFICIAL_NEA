@@ -31,9 +31,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblselectseat = new System.Windows.Forms.Label();
             this.PanelSeats = new System.Windows.Forms.Panel();
+            this.emiratesstadiumchartinfseats = new System.Windows.Forms.PictureBox();
             this.exit_btn = new System.Windows.Forms.Button();
             this.confirmseat_btn = new System.Windows.Forms.Button();
-            this.emiratesstadiumchartinfseats = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.PanelSeats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.emiratesstadiumchartinfseats)).BeginInit();
@@ -73,6 +73,18 @@
             this.PanelSeats.TabIndex = 2;
             this.PanelSeats.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelSeats_Paint);
             // 
+            // emiratesstadiumchartinfseats
+            // 
+            this.emiratesstadiumchartinfseats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emiratesstadiumchartinfseats.Image = global::OFFICIAL_NEA.Properties.Resources.emiratesstadiumseatingchart;
+            this.emiratesstadiumchartinfseats.Location = new System.Drawing.Point(0, 0);
+            this.emiratesstadiumchartinfseats.Name = "emiratesstadiumchartinfseats";
+            this.emiratesstadiumchartinfseats.Size = new System.Drawing.Size(707, 261);
+            this.emiratesstadiumchartinfseats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.emiratesstadiumchartinfseats.TabIndex = 0;
+            this.emiratesstadiumchartinfseats.TabStop = false;
+            this.emiratesstadiumchartinfseats.Click += new System.EventHandler(this.emiratesstadiumchartinfseats_Click);
+            // 
             // exit_btn
             // 
             this.exit_btn.BackColor = System.Drawing.Color.Red;
@@ -94,17 +106,6 @@
             this.confirmseat_btn.Text = "Confirm Seat";
             this.confirmseat_btn.UseVisualStyleBackColor = false;
             this.confirmseat_btn.Click += new System.EventHandler(this.confirmseat_btn_Click);
-            // 
-            // emiratesstadiumchartinfseats
-            // 
-            this.emiratesstadiumchartinfseats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.emiratesstadiumchartinfseats.Image = global::OFFICIAL_NEA.Properties.Resources.emiratesstadiumseatingchart;
-            this.emiratesstadiumchartinfseats.Location = new System.Drawing.Point(0, 0);
-            this.emiratesstadiumchartinfseats.Name = "emiratesstadiumchartinfseats";
-            this.emiratesstadiumchartinfseats.Size = new System.Drawing.Size(707, 261);
-            this.emiratesstadiumchartinfseats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.emiratesstadiumchartinfseats.TabIndex = 0;
-            this.emiratesstadiumchartinfseats.TabStop = false;
             // 
             // SeatMap
             // 

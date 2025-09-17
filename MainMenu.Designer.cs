@@ -86,6 +86,7 @@
             this.Inbox_btn.TabIndex = 3;
             this.Inbox_btn.Text = "Inbox";
             this.Inbox_btn.UseVisualStyleBackColor = true;
+            this.Inbox_btn.Click += new System.EventHandler(this.Inbox_btn_Click);
             // 
             // Ticket_history_btn
             // 
