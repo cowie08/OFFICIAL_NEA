@@ -72,5 +72,14 @@ namespace OFFICIAL_NEA
             this.Close();
             //inbox form
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TicketTransfer ticketTransfer = new TicketTransfer();
+            ticketTransfer.Show();
+            this.Close();
+
+            // ticket transfer form
+        }
     }
 }
