@@ -64,5 +64,22 @@ namespace OFFICIAL_NEA
         {
 
         }
+
+        private void Inbox_btn_Click(object sender, EventArgs e)
+        {
+            Inbox inbox = new Inbox();
+            inbox.Show();
+            this.Close();
+            //inbox form
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TicketTransfer ticketTransfer = new TicketTransfer();
+            ticketTransfer.Show();
+            this.Close();
+
+            // ticket transfer form
+        }
     }
 }

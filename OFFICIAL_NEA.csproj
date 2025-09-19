@@ -56,6 +56,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,6 +81,12 @@
       <DependentUpon>BuyTicketscs.cs</DependentUpon>
     </Compile>
     <Compile Include="Hash.cs" />
+    <Compile Include="Inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbox.Designer.cs">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +125,20 @@
     <Compile Include="TicketigHisotr.Designer.cs">
       <DependentUpon>TicketigHisotr.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketTransfer.Designer.cs">
+      <DependentUpon>TicketTransfer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyTicketscs.resx">
       <DependentUpon>BuyTicketscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbox.resx">
+      <DependentUpon>Inbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
@@ -151,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketigHisotr.resx">
       <DependentUpon>TicketigHisotr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketTransfer.resx">
+      <DependentUpon>TicketTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Football_Ticketing.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
