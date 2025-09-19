@@ -43,7 +43,7 @@ namespace OFFICIAL_NEA
         private void login_confirm_btn_Click(object sender, EventArgs e)
         {
 
-            string connectionstring = "Data Source=Football_Ticketing.db;Version=3;";
+            string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
 
 
             string FirstName = firstname_txtbox.Text.Trim();

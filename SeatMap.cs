@@ -66,7 +66,7 @@ namespace OFFICIAL_NEA
 
 
 
-            string connectionstring = "Data Source=Football_Ticketing.db;Version=3;";
+            string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionstring))
             {
@@ -213,7 +213,7 @@ namespace OFFICIAL_NEA
 
             
             
-            string connectionstring = "Data Source=Football_Ticketing.db;Version=3;";
+            string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
 
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionstring))

@@ -62,7 +62,7 @@ namespace OFFICIAL_NEA
             try
             {
 
-                using (SQLiteConnection conn = new SQLiteConnection("Data Source=Football_Ticketing.db;Version=3;"))
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=../../dbfile/Football_Ticketing.db;Version=3;"))
                 {
                     conn.Open();
                     string query = @"SELECT Match_Id,opponent,Match_Date,Game_Type FROM Matches WHERE Club_Id =1";
