@@ -57,3 +57,5 @@ C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.Membership
 \\store\studenthomes\2024\24SC4340\CompSci\obj\Debug\OFFICIAL_NEA.pdb
 \\store\studenthomes\2024\24SC4340\CompSci\obj\Debug\OFFICIAL_NEA.Inbox.resources
 \\store\studenthomes\2024\24SC4340\CompSci\obj\Debug\OFFICIAL_NEA.TicketTransfer.resources
+C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.Inbox.resources
+C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.TicketTransfer.resources
