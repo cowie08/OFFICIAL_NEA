@@ -53,7 +53,7 @@ namespace OFFICIAL_NEA
 
         private void Membership_btn_Click(object sender, EventArgs e)
         {
-            Memberships memberships = new Memberships();
+            Memberships memberships = new Memberships(LoggedInUserId);
             memberships.Show();
             this.Close();
 
