@@ -317,7 +317,7 @@ namespace OFFICIAL_NEA
                         }
                         else 
                         {
-                            label_currenttier.Text = "You currently have no memberhsip active";
+                            label_currenttier.Text = "You currently have no membership active";
                             lbl_expiry.Text = "";
 
                             lbl_expiry.BackColor= Color.Gainsboro;  

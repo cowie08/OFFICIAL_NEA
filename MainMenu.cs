@@ -75,7 +75,7 @@ namespace OFFICIAL_NEA
 
         private void button5_Click(object sender, EventArgs e)
         {
-            TicketTransfer ticketTransfer = new TicketTransfer();
+            TicketTransfer ticketTransfer = new TicketTransfer(LoggedInUserId);
             ticketTransfer.Show();
             this.Close();
 
