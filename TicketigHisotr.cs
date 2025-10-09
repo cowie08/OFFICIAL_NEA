@@ -56,7 +56,7 @@ namespace OFFICIAL_NEA
 
 
             }
-
+            
             VisualTicketHistory();
         }
 

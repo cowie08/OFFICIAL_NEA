@@ -52,13 +52,12 @@
             this.transfer_btn.TabIndex = 0;
             this.transfer_btn.Text = "TRANSFER";
             this.transfer_btn.UseVisualStyleBackColor = false;
-            this.transfer_btn.Click += new System.EventHandler(this.transfer_btn_Click);
             // 
             // exit_btn
             // 
             this.exit_btn.BackColor = System.Drawing.Color.Red;
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit_btn.Location = new System.Drawing.Point(437, 336);
+            this.exit_btn.Location = new System.Drawing.Point(844, 347);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(232, 91);
             this.exit_btn.TabIndex = 1;
@@ -71,7 +70,7 @@
             this.dataGridView_usertotransfer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_usertotransfer.Location = new System.Drawing.Point(17, 25);
             this.dataGridView_usertotransfer.Name = "dataGridView_usertotransfer";
-            this.dataGridView_usertotransfer.Size = new System.Drawing.Size(312, 203);
+            this.dataGridView_usertotransfer.Size = new System.Drawing.Size(540, 203);
             this.dataGridView_usertotransfer.TabIndex = 2;
             // 
             // grpbox_selectuser
@@ -79,21 +78,22 @@
             this.grpbox_selectuser.BackColor = System.Drawing.Color.Gainsboro;
             this.grpbox_selectuser.Controls.Add(this.dataGridView_usertotransfer);
             this.grpbox_selectuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbox_selectuser.Location = new System.Drawing.Point(403, 96);
+            this.grpbox_selectuser.Location = new System.Drawing.Point(603, 90);
             this.grpbox_selectuser.Name = "grpbox_selectuser";
-            this.grpbox_selectuser.Size = new System.Drawing.Size(346, 234);
+            this.grpbox_selectuser.Size = new System.Drawing.Size(563, 240);
             this.grpbox_selectuser.TabIndex = 3;
             this.grpbox_selectuser.TabStop = false;
             this.grpbox_selectuser.Text = "Select a user to transfer to:";
+            this.grpbox_selectuser.Enter += new System.EventHandler(this.grpbox_selectuser_Enter);
             // 
             // grpbox
             // 
             this.grpbox.BackColor = System.Drawing.Color.Gainsboro;
             this.grpbox.Controls.Add(this.dataGridView_ticket);
             this.grpbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbox.Location = new System.Drawing.Point(25, 96);
+            this.grpbox.Location = new System.Drawing.Point(12, 90);
             this.grpbox.Name = "grpbox";
-            this.grpbox.Size = new System.Drawing.Size(363, 234);
+            this.grpbox.Size = new System.Drawing.Size(573, 240);
             this.grpbox.TabIndex = 4;
             this.grpbox.TabStop = false;
             this.grpbox.Text = "Select a ticket";
@@ -104,7 +104,7 @@
             this.dataGridView_ticket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ticket.Location = new System.Drawing.Point(15, 25);
             this.dataGridView_ticket.Name = "dataGridView_ticket";
-            this.dataGridView_ticket.Size = new System.Drawing.Size(312, 203);
+            this.dataGridView_ticket.Size = new System.Drawing.Size(552, 203);
             this.dataGridView_ticket.TabIndex = 3;
             // 
             // label1
@@ -134,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1178, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grpbox);
@@ -143,6 +143,7 @@
             this.Controls.Add(this.transfer_btn);
             this.Name = "TicketTransfer";
             this.Text = "TicketTransfer";
+            this.Load += new System.EventHandler(this.TicketTransfer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usertotransfer)).EndInit();
             this.grpbox_selectuser.ResumeLayout(false);
             this.grpbox.ResumeLayout(false);
