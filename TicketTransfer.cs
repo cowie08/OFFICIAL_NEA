@@ -31,5 +31,10 @@ namespace OFFICIAL_NEA
         {
 
         }
+
+        private void transfer_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

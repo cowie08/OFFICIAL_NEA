@@ -33,9 +33,9 @@
             this.dataGridView_usertotransfer = new System.Windows.Forms.DataGridView();
             this.grpbox_selectuser = new System.Windows.Forms.GroupBox();
             this.grpbox = new System.Windows.Forms.GroupBox();
+            this.dataGridView_ticket = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView_ticket = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usertotransfer)).BeginInit();
             this.grpbox_selectuser.SuspendLayout();
             this.grpbox.SuspendLayout();
@@ -52,6 +52,7 @@
             this.transfer_btn.TabIndex = 0;
             this.transfer_btn.Text = "TRANSFER";
             this.transfer_btn.UseVisualStyleBackColor = false;
+            this.transfer_btn.Click += new System.EventHandler(this.transfer_btn_Click);
             // 
             // exit_btn
             // 
@@ -98,6 +99,14 @@
             this.grpbox.Text = "Select a ticket";
             this.grpbox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // dataGridView_ticket
+            // 
+            this.dataGridView_ticket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ticket.Location = new System.Drawing.Point(15, 25);
+            this.dataGridView_ticket.Name = "dataGridView_ticket";
+            this.dataGridView_ticket.Size = new System.Drawing.Size(312, 203);
+            this.dataGridView_ticket.TabIndex = 3;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -119,14 +128,6 @@
             this.label2.Size = new System.Drawing.Size(468, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "You can refund a ticket or transfer a ticet to another user";
-            // 
-            // dataGridView_ticket
-            // 
-            this.dataGridView_ticket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ticket.Location = new System.Drawing.Point(15, 25);
-            this.dataGridView_ticket.Name = "dataGridView_ticket";
-            this.dataGridView_ticket.Size = new System.Drawing.Size(312, 203);
-            this.dataGridView_ticket.TabIndex = 3;
             // 
             // TicketTransfer
             // 

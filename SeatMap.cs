@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Data.SqlClient;
 
 namespace OFFICIAL_NEA
 {
@@ -206,6 +207,8 @@ namespace OFFICIAL_NEA
             var seatTag =(Tuple<int,decimal,string>)selectseatbtn.Tag;
             int seatId = seatTag.Item1;
             decimal seatPrice = seatTag.Item2;
+            decimal discount = 0m;
+            int LP_Bonus = 0;
 
             
 
@@ -216,23 +219,58 @@ namespace OFFICIAL_NEA
             string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
 
 
-            using (SQLiteConnection connection = new SQLiteConnection(connectionstring))
+            using (var connection = new SQLiteConnection(connectionstring))
             { 
                 connection.Open();
-                
-                string insertIntoTicket = "INSERT INTO Tickets (Seat_Id,User_ID,Date_Purchase,discount) VALUES (@seatId,@userId,@date,0)";
 
-                using (SQLiteCommand command = new SQLiteCommand(insertIntoTicket, connection))
+                string membershipQUERY = @"SELECT M.Discount,M.LP_Bonus FROM User_Memberships UM JOIN Memberships M ON UM.Membership_Id = M.Membership_Id WHERE UM.User_Id =@userId ORDER BY UM.EndDate DESC LIMIT 1;";
+
+                using (var cmd = new SQLiteCommand(membershipQUERY, connection))
+                {
+                    cmd.Parameters.AddWithValue("@userId", userid);
+                    using (var read = cmd.ExecuteReader())
+                    {
+                        if (read.Read())
+                        {
+                            discount = Convert.ToDecimal(read["Discount"]);
+                            LP_Bonus = Convert.ToInt32(read["LP_Bonus"]);
+
+                            if (discount > 1)
+                                discount /= 100m;
+
+
+
+                        
+                        }
+                    }
+                
+                
+                }
+
+                decimal FinalPrice = seatPrice - (seatPrice * discount);
+                if(FinalPrice < 0)
+                    FinalPrice = 0;
+
+
+
+
+
+
+                
+                string insertIntoTicket = "INSERT INTO Tickets (Seat_Id,User_ID,Date_Purchase,discount) VALUES (@seatId,@userId,@date,@discount);";
+
+                using (var command = new SQLiteCommand(insertIntoTicket, connection))
                 {
                     command.Parameters.AddWithValue("@seatId", seatId);
                     command.Parameters.AddWithValue("@userId", userid);
                     command.Parameters.AddWithValue("@date", DateTime.Now);
+                    command.Parameters.AddWithValue("@discount",discount);
                     command.ExecuteNonQuery();
                 }
                     
                     
                     string updateSeats = "UPDATE Seats SET Seat_Status = 'Sold' WHERE Seat_Id = @seatId";
-                    using(SQLiteCommand command1 = new SQLiteCommand(updateSeats, connection)) 
+                    using(var command1 = new SQLiteCommand(updateSeats, connection)) 
                     {
                         command1.Parameters.AddWithValue("@seatId", seatId);
                         command1.ExecuteNonQuery();
@@ -241,7 +279,27 @@ namespace OFFICIAL_NEA
                     
                     }
 
-                    MessageBox.Show($"Booking Confirmed!!! SEAT: {selectseatbtn.Text} -- £{seatPrice}");
+                int LP_earned = (int)Math.Round(FinalPrice) +LP_Bonus;
+
+                string updateLP = "UPDATE Users SET loyaltypoints_Total = loyaltypoints_Total +@points WHERE User_Id =@userId";
+                using (var lpcmd = new SQLiteCommand(updateLP, connection))
+                { 
+                    lpcmd.Parameters.AddWithValue("@points",LP_earned);
+                    lpcmd.Parameters.AddWithValue("@userId", userid);
+                    lpcmd.ExecuteNonQuery ();
+
+                }
+
+
+
+
+
+                    MessageBox.Show($"Booking Confirmed!\n\n" +
+            $"Seat: {selectseatbtn.Text}\n" +
+            $"Original Price: £{seatPrice:F2}\n" +
+            $"Discount: {(discount * 100):F0}%\n" +
+            $"Final Price: £{FinalPrice:F2}\n\n" +
+            $"You have also earned {LP_earned} loyalty points!");
                 Loadseats();
 
                 MainMenu mainMenu = new MainMenu(userid);
