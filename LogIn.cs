@@ -71,10 +71,27 @@ namespace OFFICIAL_NEA
                         int LoggedInUserId = Convert.ToInt32(result);
                         MessageBox.Show("Successfull Log In!");
 
-                        
-                        MainMenu mainMenu = new MainMenu(LoggedInUserId);
-                        mainMenu.Show();
-                        this.Close();
+
+                        using (Queue queue = new Queue())
+                        {
+                            var result2 = queue.ShowDialog();
+
+                            if (result2 == DialogResult.OK)
+                            {
+                                MainMenu mainMenu = new MainMenu(LoggedInUserId);
+                                mainMenu.Show();
+                                this.Close();
+
+
+                            }
+                            else if (result2 == DialogResult.Cancel)
+                            {
+                                this.Show();
+                            }
+                        }
+
+
+                      
 
                         //if user successfully logs in they are proceeded to the main menu screen
                     }

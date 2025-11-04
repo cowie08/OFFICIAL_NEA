@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.resale_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usertotransfer)).BeginInit();
             this.grpbox_selectuser.SuspendLayout();
             this.grpbox.SuspendLayout();
@@ -48,7 +49,7 @@
             // 
             this.transfer_btn.BackColor = System.Drawing.Color.Lime;
             this.transfer_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transfer_btn.Location = new System.Drawing.Point(105, 336);
+            this.transfer_btn.Location = new System.Drawing.Point(40, 400);
             this.transfer_btn.Name = "transfer_btn";
             this.transfer_btn.Size = new System.Drawing.Size(232, 91);
             this.transfer_btn.TabIndex = 0;
@@ -60,7 +61,7 @@
             // 
             this.exit_btn.BackColor = System.Drawing.Color.Red;
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit_btn.Location = new System.Drawing.Point(844, 336);
+            this.exit_btn.Location = new System.Drawing.Point(976, 409);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(232, 91);
             this.exit_btn.TabIndex = 1;
@@ -136,7 +137,7 @@
             // 
             this.resale_btn.BackColor = System.Drawing.Color.DodgerBlue;
             this.resale_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resale_btn.Location = new System.Drawing.Point(470, 336);
+            this.resale_btn.Location = new System.Drawing.Point(347, 400);
             this.resale_btn.Name = "resale_btn";
             this.resale_btn.Size = new System.Drawing.Size(232, 91);
             this.resale_btn.TabIndex = 7;
@@ -156,12 +157,25 @@
             this.label3.Text = "You can either click resale which will put your ticket back up for sale or click " +
     "a owned ticket and a user you would wish to give a ticket to and click transfer";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Gainsboro;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(617, 409);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(297, 64);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Key Note:\r\nBy Refunding a ticket you are punished \r\nby losing 70 loyalty points a" +
+    "s a prevention\r\nof mass Loyalty points hoarding!";
+            // 
             // TicketTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(1178, 450);
+            this.ClientSize = new System.Drawing.Size(1220, 512);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.resale_btn);
             this.Controls.Add(this.label2);
@@ -194,5 +208,6 @@
         private System.Windows.Forms.DataGridView dataGridView_ticket;
         private System.Windows.Forms.Button resale_btn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

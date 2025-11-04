@@ -59,3 +59,4 @@ C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.csproj.Cor
 C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL.49F75BC3.Up2Date
 C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.exe
 C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.pdb
+C:\Users\theco\source\repos\simon\OFFICIAL_NEA\obj\Debug\OFFICIAL_NEA.Queue.resources

@@ -43,6 +43,36 @@ namespace OFFICIAL_NEA
 
 
         }
+        private void InboxNotify(int userId, string message, string category)
+        {
+            //Insert into table once created 
+
+            string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
+
+            using (var connection = new SQLiteConnection(connectionstring))
+            {
+                connection.Open();
+
+                string insertInbox_QUERY = "INSERT INTO Inbox (User_Id,message,category,seen) VALUES (@userId,@Message,@Category,@Seen)";
+                using (var cmd = new SQLiteCommand(insertInbox_QUERY, connection))
+                {
+                    cmd.Parameters.AddWithValue("userId", userId);
+                    cmd.Parameters.AddWithValue("@Message", message);
+                    cmd.Parameters.AddWithValue("@Category", category);
+                    cmd.Parameters.AddWithValue("@Seen", DateTime.Now);
+                    cmd.ExecuteNonQuery();
+
+
+                }
+
+
+
+            }
+
+
+
+
+        }
 
         private void Loadseats() 
         {
@@ -294,12 +324,14 @@ namespace OFFICIAL_NEA
 
 
 
-                    MessageBox.Show($"Booking Confirmed!\n\n" +
-            $"Seat: {selectseatbtn.Text}\n" +
-            $"Original Price: £{seatPrice:F2}\n" +
-            $"Discount: {(discount * 100):F0}%\n" +
-            $"Final Price: £{FinalPrice:F2}\n\n" +
-            $"You have also earned {LP_earned} loyalty points!");
+            
+
+
+                MessageBox.Show($"Completed ticket purchase!\n Seat: {selectseatbtn.Text}\n Original Price: £{seatPrice} \n Discount: {(discount * 100)}% \n Final Price: £{FinalPrice} \n Loyalty points earned: {LP_earned}!! ");
+
+
+
+
                 Loadseats();
 
                 MainMenu mainMenu = new MainMenu(userid);
@@ -312,6 +344,8 @@ namespace OFFICIAL_NEA
                 
             
             }
+            InboxNotify(userid, "You have completed the purchase of the ticket " + selectseatbtn.Text + " costing before discount £"+seatPrice, "Ticket Purchase");
+
 
         }
 

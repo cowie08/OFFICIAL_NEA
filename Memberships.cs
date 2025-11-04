@@ -64,6 +64,38 @@ namespace OFFICIAL_NEA
 
         //each click is the memberhship the user wants to purchase 
 
+        private void InboxNotify(int userId, string message, string category )
+        {
+            //Insert into table once created 
+
+            string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
+
+            using (var connection = new SQLiteConnection(connectionstring))
+            {
+                connection.Open();
+
+                string insertInbox_QUERY = "INSERT INTO Inbox (User_Id,message,category,seen) VALUES (@userId,@Message,@Category,@Seen)";
+                using (var cmd = new SQLiteCommand(insertInbox_QUERY, connection))
+                {
+                    cmd.Parameters.AddWithValue("userId", userId);
+                    cmd.Parameters.AddWithValue("@Message", message);
+                    cmd.Parameters.AddWithValue("@Category", category);
+                    cmd.Parameters.AddWithValue("@Seen", DateTime.Now);
+                    cmd.ExecuteNonQuery();
+
+
+                }
+
+
+
+            }
+
+
+
+
+        }
+
+
         private void BuyMemberhips(string membership_name)
         {
             string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
@@ -236,12 +268,15 @@ namespace OFFICIAL_NEA
                                     }
 
                                     MessageBox.Show($"Congratulations! You have completed the purchase of {membership_name} tier membership!");
-                                    LoadCurrentMembership();
+                                   
+                                   
 
 
-                                    //memberhship query allows the user to purchase the membership if they have the correct num of loyalty points 
+                                    //membership query allows the user to purchase the membership if they have the correct num of loyalty points 
 
                                 }
+                                
+
                             }
 
 
@@ -254,7 +289,8 @@ namespace OFFICIAL_NEA
 
             }
 
-
+            InboxNotify(userId, "Successful purchase of membership!","Membership");
+            LoadCurrentMembership();
         }
 
        

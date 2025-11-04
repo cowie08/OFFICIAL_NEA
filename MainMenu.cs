@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,9 +34,27 @@ namespace OFFICIAL_NEA
         {
             int loggedInUserId = LoggedInUserId;
 
-            BuyTickets buytickets = new BuyTickets(LoggedInUserId);
-            buytickets.Show();
-            this.Close();
+            using (Queue queue = new Queue())
+            {
+                var result2 = queue.ShowDialog();
+
+                if (result2 == DialogResult.OK)
+                {
+                    BuyTickets buytickets = new BuyTickets(LoggedInUserId);
+                    buytickets.Show(); 
+                    this.Close();
+
+
+                }
+                else if (result2 == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+            }
+
+
+
+           
 
             //allows user access to buy tickets
             
@@ -67,7 +86,7 @@ namespace OFFICIAL_NEA
 
         private void Inbox_btn_Click(object sender, EventArgs e)
         {
-            Inbox inbox = new Inbox();
+            Inbox inbox = new Inbox(LoggedInUserId);
             inbox.Show();
             this.Close();
             //inbox form
