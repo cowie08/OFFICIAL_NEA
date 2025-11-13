@@ -18,6 +18,7 @@ namespace OFFICIAL_NEA
 
 
 
+
         public BuyTickets(int userId)
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace OFFICIAL_NEA
 
         private void dataGridView_matches_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void VisualDGV()
@@ -51,7 +52,7 @@ namespace OFFICIAL_NEA
             dataGridView_matches.Columns["opponent"].HeaderText = "Opponent";
             dataGridView_matches.Columns["Game_Type"].HeaderText = "Game Type";
             
-            // improves the design of the datagridview to make it more realsitic 
+            // improves the visual of the datagridview 
 
 
         }
@@ -101,7 +102,7 @@ namespace OFFICIAL_NEA
 
         private void selectmatch_btn_Click(object sender, EventArgs e)
         {
-            if (dataGridView_matches.SelectedRows.Count > 0)
+            if (dataGridView_matches.SelectedRows.Count == 1)
             {
                 int loggedINUSerId = loggedInUserId;
                 int Match_Id = Convert.ToInt32(dataGridView_matches.SelectedRows[0].Cells["Match_Id"].Value);
@@ -109,14 +110,14 @@ namespace OFFICIAL_NEA
                 seatMap.Show();
                 this.Close();
 
-                // allows user once clicked on a match from datatbale to confirm and then load to seatmap form 
+                // allows user once clicked on a match from datatable to confirm and then load to seatmap form 
 
             }
             else
             {
-                MessageBox.Show("Please select a different match: we are experiencing technical issues");
+                MessageBox.Show("You can only select one match at a time!");
 
-                //error with databse laoidng normally due to tehcnical issues with seatmap
+               
             }
 
 

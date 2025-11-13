@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lbl_queue = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_Queue = new System.Windows.Forms.GroupBox();
             this.ext_btn = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox_Queue.SuspendLayout();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -57,17 +59,17 @@
             this.lbl_queue.Size = new System.Drawing.Size(0, 24);
             this.lbl_queue.TabIndex = 1;
             // 
-            // groupBox1
+            // groupBox_Queue
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
-            this.groupBox1.Controls.Add(this.lbl_queue);
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(106, 106);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(560, 192);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Queue Position:";
+            this.groupBox_Queue.BackColor = System.Drawing.Color.Silver;
+            this.groupBox_Queue.Controls.Add(this.lbl_queue);
+            this.groupBox_Queue.ForeColor = System.Drawing.Color.Black;
+            this.groupBox_Queue.Location = new System.Drawing.Point(106, 106);
+            this.groupBox_Queue.Name = "groupBox_Queue";
+            this.groupBox_Queue.Size = new System.Drawing.Size(560, 192);
+            this.groupBox_Queue.TabIndex = 2;
+            this.groupBox_Queue.TabStop = false;
+            this.groupBox_Queue.Text = "Queue Position:";
             // 
             // ext_btn
             // 
@@ -82,6 +84,10 @@
             this.ext_btn.UseVisualStyleBackColor = false;
             this.ext_btn.Click += new System.EventHandler(this.ext_btn_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Queue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 31F);
@@ -89,7 +95,7 @@
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(759, 554);
             this.Controls.Add(this.ext_btn);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_Queue);
             this.Controls.Add(this.progressBar1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Red;
@@ -97,8 +103,8 @@
             this.Name = "Queue";
             this.Text = "Queue";
             this.Load += new System.EventHandler(this.Queue_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_Queue.ResumeLayout(false);
+            this.groupBox_Queue.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -107,7 +113,8 @@
 
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lbl_queue;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_Queue;
         private System.Windows.Forms.Button ext_btn;
+        private System.Windows.Forms.Timer timer1;
     }
 }

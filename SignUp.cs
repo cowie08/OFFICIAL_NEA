@@ -67,33 +67,18 @@ namespace OFFICIAL_NEA
             {
                 MessageBox.Show("Password do not match");
                 return;
-            //checks if confirm password is the same a password
+                 //checks if confirm password is the same as password
             }
 
             if (!ValidEmailCheck(email))
             {
                 MessageBox.Show("Invalid email format");
                 return;
-            // checks if email is valid
+                    // checks if email is a valid regex
             }
 
-            
-
-
-
-            
-
-
+           
             string password_Hash = Hash.PasswordHashCreator(password);
-
-            
-
-
-
-
-
-
-
 
 
             using (SQLiteConnection conn = new SQLiteConnection(connectionstring))
@@ -120,21 +105,15 @@ namespace OFFICIAL_NEA
                     }
 
 
+                    string user_QUERY = @"INSERT INTO Users(First_name,Surname,Username,Address,email,Password_Hash,loyaltypoints_total) VALUES(@fname, @sname, @username, @address, @email, @password, 0)";
 
-
-
-
-
-
-                    string query = @"INSERT INTO Users(First_name,Surname,Username,Address,email,Password_Hash,loyaltypoints_total) VALUES(@fname, @sname, @uname, @address, @email, @pass, 0)";
-
-                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                    SQLiteCommand cmd = new SQLiteCommand(user_QUERY, conn);
                     cmd.Parameters.AddWithValue("@fname", FirstName);
                     cmd.Parameters.AddWithValue("@sname", surname);
-                    cmd.Parameters.AddWithValue("@uname", username);
+                    cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@address", HomeAddress);
                     cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@pass", password_Hash);
+                    cmd.Parameters.AddWithValue("@password", password_Hash);
 
                     cmd.ExecuteNonQuery();
 
@@ -173,7 +152,7 @@ namespace OFFICIAL_NEA
                     }
                     else
                     {
-                        MessageBox.Show("A databse error has occured: " + ex.Message);
+                        MessageBox.Show("A database error has occured: " + ex.Message);
 
                         // an unexplained error has happened 
 
@@ -190,10 +169,10 @@ namespace OFFICIAL_NEA
         }
         private bool ValidEmailCheck(string email)
         { 
-        string email_format = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-        return Regex.IsMatch(email, email_format);
+            string email_format = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, email_format);
 
-        //REGEX is used to see if string pattern matches the so the users email is inputted correclty 
+            //REGEX is used to see if string pattern matches so the users email is formatted correctly 
         }
         
 

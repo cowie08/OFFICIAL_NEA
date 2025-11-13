@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_SeatMap = new System.Windows.Forms.GroupBox();
             this.lblselectseat = new System.Windows.Forms.Label();
             this.PanelSeats = new System.Windows.Forms.Panel();
             this.emiratesstadiumchartinfseats = new System.Windows.Forms.PictureBox();
             this.exit_btn = new System.Windows.Forms.Button();
             this.confirmseat_btn = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_SeatMap.SuspendLayout();
             this.PanelSeats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.emiratesstadiumchartinfseats)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox_SeatMap
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.groupBox1.Controls.Add(this.lblselectseat);
-            this.groupBox1.Controls.Add(this.PanelSeats);
-            this.groupBox1.Controls.Add(this.exit_btn);
-            this.groupBox1.Controls.Add(this.confirmseat_btn);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(49, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(707, 387);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Select your seat:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox_SeatMap.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox_SeatMap.Controls.Add(this.lblselectseat);
+            this.groupBox_SeatMap.Controls.Add(this.PanelSeats);
+            this.groupBox_SeatMap.Controls.Add(this.exit_btn);
+            this.groupBox_SeatMap.Controls.Add(this.confirmseat_btn);
+            this.groupBox_SeatMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_SeatMap.Location = new System.Drawing.Point(49, 24);
+            this.groupBox_SeatMap.Name = "groupBox_SeatMap";
+            this.groupBox_SeatMap.Size = new System.Drawing.Size(707, 387);
+            this.groupBox_SeatMap.TabIndex = 0;
+            this.groupBox_SeatMap.TabStop = false;
+            this.groupBox_SeatMap.Text = "Select your seat:";
+            this.groupBox_SeatMap.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblselectseat
             // 
@@ -113,12 +113,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_SeatMap);
             this.Name = "SeatMap";
             this.Text = "SeatMap";
             this.Load += new System.EventHandler(this.SeatMap_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_SeatMap.ResumeLayout(false);
+            this.groupBox_SeatMap.PerformLayout();
             this.PanelSeats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.emiratesstadiumchartinfseats)).EndInit();
             this.ResumeLayout(false);
@@ -127,7 +127,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_SeatMap;
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.Button confirmseat_btn;
         private System.Windows.Forms.Panel PanelSeats;

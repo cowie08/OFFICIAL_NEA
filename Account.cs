@@ -26,7 +26,7 @@ namespace OFFICIAL_NEA
             InitializeComponent();
             this.userId = userId;
 
-            // Allows for current user to be remembered for ticket history
+            // Allows for current user to be remembered to be able to gather info from database
 
 
         }
@@ -52,6 +52,7 @@ namespace OFFICIAL_NEA
             SignUp signUp = new SignUp();
             signUp.Show();
             this.Hide();
+            
             //opens sign up form
         }
 

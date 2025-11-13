@@ -28,59 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.llabel_Title = new System.Windows.Forms.Label();
+            this.label_Info1 = new System.Windows.Forms.Label();
+            this.groupBox_INBOX = new System.Windows.Forms.GroupBox();
             this.dataGridView_inbox = new System.Windows.Forms.DataGridView();
             this.ext_btn = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.monthCalendar_Visual = new System.Windows.Forms.MonthCalendar();
+            this.label_Info2 = new System.Windows.Forms.Label();
+            this.groupBox_LP = new System.Windows.Forms.GroupBox();
             this.LP_panel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_LP_total = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.lbl_LP_total = new System.Windows.Forms.Label();
+            this.label_LpInfo = new System.Windows.Forms.Label();
+            this.groupBox_INBOX.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_inbox)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_LP.SuspendLayout();
             this.LP_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl1
+            // llabel_Title
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.Gainsboro;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(31, 33);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(188, 20);
-            this.lbl1.TabIndex = 0;
-            this.lbl1.Text = "Welcome to the Inbox!";
-            this.lbl1.Click += new System.EventHandler(this.label1_Click);
+            this.llabel_Title.AutoSize = true;
+            this.llabel_Title.BackColor = System.Drawing.Color.Gainsboro;
+            this.llabel_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llabel_Title.Location = new System.Drawing.Point(31, 33);
+            this.llabel_Title.Name = "llabel_Title";
+            this.llabel_Title.Size = new System.Drawing.Size(188, 20);
+            this.llabel_Title.TabIndex = 0;
+            this.llabel_Title.Text = "Welcome to the Inbox!";
+            this.llabel_Title.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // label_Info1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(723, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "This is the place where it shows you everything you have done on the system for e" +
+            this.label_Info1.AutoSize = true;
+            this.label_Info1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_Info1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Info1.Location = new System.Drawing.Point(31, 53);
+            this.label_Info1.Name = "label_Info1";
+            this.label_Info1.Size = new System.Drawing.Size(723, 20);
+            this.label_Info1.TabIndex = 1;
+            this.label_Info1.Text = "This is the place where it shows you everything you have done on the system for e" +
     "xample:\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label_Info1.Click += new System.EventHandler(this.label2_Click);
             // 
-            // groupBox1
+            // groupBox_INBOX
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.dataGridView_inbox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 169);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(749, 271);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "INBOX";
+            this.groupBox_INBOX.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox_INBOX.Controls.Add(this.dataGridView_inbox);
+            this.groupBox_INBOX.Location = new System.Drawing.Point(12, 169);
+            this.groupBox_INBOX.Name = "groupBox_INBOX";
+            this.groupBox_INBOX.Size = new System.Drawing.Size(749, 271);
+            this.groupBox_INBOX.TabIndex = 2;
+            this.groupBox_INBOX.TabStop = false;
+            this.groupBox_INBOX.Text = "INBOX";
             // 
             // dataGridView_inbox
             // 
@@ -105,35 +105,35 @@
             this.ext_btn.UseVisualStyleBackColor = false;
             this.ext_btn.Click += new System.EventHandler(this.ext_btn_Click);
             // 
-            // monthCalendar1
+            // monthCalendar_Visual
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(766, 231);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.monthCalendar_Visual.Location = new System.Drawing.Point(766, 231);
+            this.monthCalendar_Visual.Name = "monthCalendar_Visual";
+            this.monthCalendar_Visual.TabIndex = 4;
+            this.monthCalendar_Visual.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
-            // label1
+            // label_Info2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Ticket purchases and Membership upgrades and downgrades";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label_Info2.AutoSize = true;
+            this.label_Info2.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_Info2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Info2.Location = new System.Drawing.Point(31, 73);
+            this.label_Info2.Name = "label_Info2";
+            this.label_Info2.Size = new System.Drawing.Size(499, 20);
+            this.label_Info2.TabIndex = 5;
+            this.label_Info2.Text = "Ticket purchases and Membership upgrades and downgrades";
+            this.label_Info2.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // groupBox2
+            // groupBox_LP
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Controls.Add(this.LP_panel);
-            this.groupBox2.Location = new System.Drawing.Point(27, 466);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(520, 127);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Loyalty Point Viewer";
+            this.groupBox_LP.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox_LP.Controls.Add(this.LP_panel);
+            this.groupBox_LP.Location = new System.Drawing.Point(27, 466);
+            this.groupBox_LP.Name = "groupBox_LP";
+            this.groupBox_LP.Size = new System.Drawing.Size(520, 127);
+            this.groupBox_LP.TabIndex = 3;
+            this.groupBox_LP.TabStop = false;
+            this.groupBox_LP.Text = "Loyalty Point Viewer";
             // 
             // LP_panel
             // 
@@ -146,17 +146,15 @@
             this.LP_panel.TabIndex = 0;
             this.LP_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.LP_panel_Paint);
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(365, 60);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "This is also the place to view how many\r\nloyalty points you have earned! You can " +
-    "see \r\nthis right below the inbox!";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Total Loyalty Points:";
             // 
             // lbl_LP_total
             // 
@@ -168,15 +166,17 @@
             this.lbl_LP_total.Size = new System.Drawing.Size(0, 25);
             this.lbl_LP_total.TabIndex = 0;
             // 
-            // label4
+            // label_LpInfo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Total Loyalty Points:";
+            this.label_LpInfo.AutoSize = true;
+            this.label_LpInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_LpInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_LpInfo.Location = new System.Drawing.Point(31, 106);
+            this.label_LpInfo.Name = "label_LpInfo";
+            this.label_LpInfo.Size = new System.Drawing.Size(365, 60);
+            this.label_LpInfo.TabIndex = 6;
+            this.label_LpInfo.Text = "This is also the place to view how many\r\nloyalty points you have earned! You can " +
+    "see \r\nthis right below the inbox!";
             // 
             // Inbox
             // 
@@ -184,20 +184,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(995, 630);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.label_LpInfo);
+            this.Controls.Add(this.groupBox_LP);
+            this.Controls.Add(this.label_Info2);
+            this.Controls.Add(this.monthCalendar_Visual);
             this.Controls.Add(this.ext_btn);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.groupBox_INBOX);
+            this.Controls.Add(this.label_Info1);
+            this.Controls.Add(this.llabel_Title);
             this.Name = "Inbox";
             this.Text = "Inbox";
             this.Load += new System.EventHandler(this.Inbox_Load);
-            this.groupBox1.ResumeLayout(false);
+            this.groupBox_INBOX.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_inbox)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.groupBox_LP.ResumeLayout(false);
             this.LP_panel.ResumeLayout(false);
             this.LP_panel.PerformLayout();
             this.ResumeLayout(false);
@@ -207,16 +207,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label llabel_Title;
+        private System.Windows.Forms.Label label_Info1;
+        private System.Windows.Forms.GroupBox groupBox_INBOX;
         private System.Windows.Forms.DataGridView dataGridView_inbox;
         private System.Windows.Forms.Button ext_btn;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.MonthCalendar monthCalendar_Visual;
+        private System.Windows.Forms.Label label_Info2;
+        private System.Windows.Forms.GroupBox groupBox_LP;
         private System.Windows.Forms.Panel LP_panel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_LpInfo;
         private System.Windows.Forms.Label lbl_LP_total;
         private System.Windows.Forms.Label label4;
     }

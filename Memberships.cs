@@ -137,6 +137,7 @@ namespace OFFICIAL_NEA
                     {"platinum",3 }
 
 
+                    // assigns memberships memerbship_Ids
 
                 };
 
@@ -146,14 +147,14 @@ namespace OFFICIAL_NEA
 
                 if (selectedtier == currentRank)
                 {
-                    MessageBox.Show($"You already have purchased the {membership_name} membership");
+                    MessageBox.Show("You already have purchased the "+membership_name+" membership");
                     return;
                 
                 }
 
                 if (selectedtier > currentRank)
                 {
-                    var result = MessageBox.Show($"You are about to upgrade from {currentTier} to {membership_name}. Are you sure?", "CONFIRM UPGRADE", MessageBoxButtons.YesNo);
+                    var result = MessageBox.Show("You are about to upgrade from "+currentTier+" to "+membership_name+". Do you want to confirm?", "CONFIRM UPGRADE", MessageBoxButtons.YesNo);
                     if (result != DialogResult.Yes)
                     {
                         return;
@@ -165,7 +166,7 @@ namespace OFFICIAL_NEA
 
                 if (selectedtier < currentRank)
                 {
-                    var result = MessageBox.Show($"You are about to downgrade from {currentTier} to {membership_name}. Are you sure?", "CONFIRM DOWNGRADE", MessageBoxButtons.YesNo);
+                    var result = MessageBox.Show("You are about to downgrade from "+currentTier+" to "+membership_name+". Do you want to confirm?", "CONFIRM DOWNGRADE", MessageBoxButtons.YesNo);
                     if (result != DialogResult.Yes)
                     {
                         return;
@@ -175,7 +176,7 @@ namespace OFFICIAL_NEA
                 }
 
 
-                // current query used to check the user current memberhsip if has one (used for upgrades)
+                // current query used to check the user current membership 
 
 
 
@@ -191,7 +192,7 @@ namespace OFFICIAL_NEA
                         if (!reader.HasRows)
                         {
 
-                            MessageBox.Show($"no memberhship found for {membership_name}");
+                            MessageBox.Show("no memberhship found for "+membership_name+".");
                             return;
                         
                         }
@@ -224,8 +225,8 @@ namespace OFFICIAL_NEA
                                 DateTime endDate = startdate.AddDays(duration);
 
 
-                                string chechOwnedMembership_QUERY = "SELECT UserMembership_Id FROM User_Memberships WHERE User_Id = @userId";
-                                using (SQLiteCommand checkCmd = new SQLiteCommand(chechOwnedMembership_QUERY, connection))
+                                string checkOwnedMembership_QUERY = "SELECT UserMembership_Id FROM User_Memberships WHERE User_Id = @userId";
+                                using (SQLiteCommand checkCmd = new SQLiteCommand(checkOwnedMembership_QUERY, connection))
                                 {
                                     checkCmd.Parameters.AddWithValue("@userId", userId);
                                     object existing = checkCmd.ExecuteScalar();
@@ -267,12 +268,12 @@ namespace OFFICIAL_NEA
                                         }
                                     }
 
-                                    MessageBox.Show($"Congratulations! You have completed the purchase of {membership_name} tier membership!");
+                                    MessageBox.Show("Congratulations! You have completed the purchase of "+membership_name+" tier membership!");
                                    
                                    
 
 
-                                    //membership query allows the user to purchase the membership if they have the correct num of loyalty points 
+                                    //membership query allows the user to purchase the membership if they have the correct amount of loyalty points 
 
                                 }
                                 
@@ -289,7 +290,7 @@ namespace OFFICIAL_NEA
 
             }
 
-            InboxNotify(userId, "Successful purchase of membership!","Membership");
+            InboxNotify(userId, "Successful purchase of a membership!","Membership");
             LoadCurrentMembership();
         }
 
@@ -325,7 +326,7 @@ namespace OFFICIAL_NEA
 
 
                             label_currenttier.Text = $"Current Membership: {tierDisplay}";
-                            lbl_expiry.Text = $"Expire on: {endDate:dd MMM yyyy}";
+                            lbl_expiry.Text = $"Expire on: "+endDate+":dd MMM yyyy}";
 
                             Color lbltiercolour;
                             switch (tier.ToLower()) 
@@ -349,7 +350,7 @@ namespace OFFICIAL_NEA
                             label_currenttier.BackColor = lbltiercolour;
                             lbl_expiry.BackColor = lbltiercolour;
 
-
+                            // set colour of text to membership color
                         }
                         else 
                         {
@@ -362,7 +363,7 @@ namespace OFFICIAL_NEA
                         }
                     }
 
-                    // LoadCurrentMembership allows it to display there current membership in the top panel and also when they leave and re-etner the form it is shown
+                    // LoadCurrentMembership allows it to display there current membership in the top panel so when they leave and re-enter the form it is still shown
 
                 }
 
@@ -378,7 +379,7 @@ namespace OFFICIAL_NEA
             LoadCurrentMembership();
 
 
-            //when the user closes or presses exit it save the owned membership
+            //when the user closes or presses exit it saves the owned membership
         }
 
         private void label_currenttier_Click(object sender, EventArgs e)

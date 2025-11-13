@@ -28,37 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.buyTickets_btn = new System.Windows.Forms.Button();
+            this.login_exit_btn = new System.Windows.Forms.Button();
+            this.label_title = new System.Windows.Forms.Label();
             this.Membership_btn = new System.Windows.Forms.Button();
             this.Inbox_btn = new System.Windows.Forms.Button();
             this.Ticket_history_btn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.login_exit_btn = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.btn_TicketTransfer = new System.Windows.Forms.Button();
+            this.buyTickets_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // login_exit_btn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Main Menu";
+            this.login_exit_btn.BackColor = System.Drawing.Color.Red;
+            this.login_exit_btn.Location = new System.Drawing.Point(314, 364);
+            this.login_exit_btn.Name = "login_exit_btn";
+            this.login_exit_btn.Size = new System.Drawing.Size(169, 64);
+            this.login_exit_btn.TabIndex = 16;
+            this.login_exit_btn.Text = "EXIT";
+            this.login_exit_btn.UseVisualStyleBackColor = false;
+            this.login_exit_btn.Click += new System.EventHandler(this.login_exit_btn_Click);
             // 
-            // buyTickets_btn
+            // label_title
             // 
-            this.buyTickets_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyTickets_btn.Location = new System.Drawing.Point(82, 136);
-            this.buyTickets_btn.Name = "buyTickets_btn";
-            this.buyTickets_btn.Size = new System.Drawing.Size(169, 74);
-            this.buyTickets_btn.TabIndex = 1;
-            this.buyTickets_btn.Text = "Buy Tickets";
-            this.buyTickets_btn.UseVisualStyleBackColor = true;
-            this.buyTickets_btn.Click += new System.EventHandler(this.buyTickets_btn_Click);
+            this.label_title.AutoSize = true;
+            this.label_title.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.Location = new System.Drawing.Point(240, 34);
+            this.label_title.Name = "label_title";
+            this.label_title.Size = new System.Drawing.Size(287, 65);
+            this.label_title.TabIndex = 0;
+            this.label_title.Text = "Main Menu";
             // 
             // Membership_btn
             // 
@@ -93,38 +91,27 @@
             this.Ticket_history_btn.UseVisualStyleBackColor = true;
             this.Ticket_history_btn.Click += new System.EventHandler(this.Ticket_history_btn_Click);
             // 
-            // button5
+            // btn_TicketTransfer
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(422, 258);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(169, 74);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Ticket Transfer";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btn_TicketTransfer.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TicketTransfer.Location = new System.Drawing.Point(422, 258);
+            this.btn_TicketTransfer.Name = "btn_TicketTransfer";
+            this.btn_TicketTransfer.Size = new System.Drawing.Size(169, 74);
+            this.btn_TicketTransfer.TabIndex = 5;
+            this.btn_TicketTransfer.Text = "Ticket Transfer";
+            this.btn_TicketTransfer.UseVisualStyleBackColor = true;
+            this.btn_TicketTransfer.Click += new System.EventHandler(this.button5_Click);
             // 
-            // login_exit_btn
+            // buyTickets_btn
             // 
-            this.login_exit_btn.BackColor = System.Drawing.Color.Red;
-            this.login_exit_btn.Location = new System.Drawing.Point(314, 364);
-            this.login_exit_btn.Name = "login_exit_btn";
-            this.login_exit_btn.Size = new System.Drawing.Size(169, 64);
-            this.login_exit_btn.TabIndex = 16;
-            this.login_exit_btn.Text = "EXIT";
-            this.login_exit_btn.UseVisualStyleBackColor = false;
-            this.login_exit_btn.Click += new System.EventHandler(this.login_exit_btn_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.Image = global::OFFICIAL_NEA.Properties.Resources.arsenal_logo_arsenal_vector_png_transparent_arsenal_vector_20;
-            this.pictureBox4.Location = new System.Drawing.Point(659, 352);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(141, 100);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
+            this.buyTickets_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyTickets_btn.Location = new System.Drawing.Point(82, 136);
+            this.buyTickets_btn.Name = "buyTickets_btn";
+            this.buyTickets_btn.Size = new System.Drawing.Size(169, 74);
+            this.buyTickets_btn.TabIndex = 1;
+            this.buyTickets_btn.Text = "Buy Tickets";
+            this.buyTickets_btn.UseVisualStyleBackColor = true;
+            this.buyTickets_btn.Click += new System.EventHandler(this.buyTickets_btn_Click);
             // 
             // MainMenu
             // 
@@ -132,32 +119,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.login_exit_btn);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_TicketTransfer);
             this.Controls.Add(this.Ticket_history_btn);
             this.Controls.Add(this.Inbox_btn);
             this.Controls.Add(this.Membership_btn);
             this.Controls.Add(this.buyTickets_btn);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_title);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buyTickets_btn;
+        private System.Windows.Forms.Button login_exit_btn;
+        private System.Windows.Forms.Label label_title;
         private System.Windows.Forms.Button Membership_btn;
         private System.Windows.Forms.Button Inbox_btn;
         private System.Windows.Forms.Button Ticket_history_btn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button login_exit_btn;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btn_TicketTransfer;
+        private System.Windows.Forms.Button buyTickets_btn;
     }
 }

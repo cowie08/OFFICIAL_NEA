@@ -50,9 +50,9 @@ namespace OFFICIAL_NEA
             {
                 connection.Open();
 
-                string query = @"SELECT S.Seat_Number,S.price,M.Match_Date,M.opponent,T.Date_Purchase FROM Tickets T JOIN Seats S ON T.Seat_Id = S.Seat_Id JOIN Matches M ON S.Match_Id = M.Match_Id WHERE T.User_Id =@userId ORDER BY T.Date_Purchase DESC;";
+                string UserTickets_QUERY = @"SELECT S.Seat_Number,S.price,M.Match_Date,M.opponent,T.Date_Purchase FROM Tickets T JOIN Seats S ON T.Seat_Id = S.Seat_Id JOIN Matches M ON S.Match_Id = M.Match_Id WHERE T.User_Id =@userId ORDER BY T.Date_Purchase DESC;";
 
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                using (SQLiteCommand command = new SQLiteCommand(UserTickets_QUERY, connection))
                 {
                     command.Parameters.AddWithValue("@userId", userid);
                     SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
@@ -60,7 +60,7 @@ namespace OFFICIAL_NEA
                     adapter.Fill(dt);
 
 
-
+                    //users tickets 
 
                     dataGridView_ticket.DataSource = dt;
                 }
@@ -98,7 +98,7 @@ namespace OFFICIAL_NEA
 
                 VisualUserTransfer();
 
-
+                // all user to transfer to 
 
             }
         }
@@ -156,7 +156,7 @@ namespace OFFICIAL_NEA
             
             }
 
-
+            // user cant transfer to itself prevention 
 
             return email;
         }
@@ -273,6 +273,8 @@ namespace OFFICIAL_NEA
                     }
                     ticketId = Convert.ToInt32(result);
 
+
+                    // cant transfer same tikcet multiple times 
                 }
 
 
@@ -389,22 +391,7 @@ namespace OFFICIAL_NEA
 
 
 
-                        
-                      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                       
                         string updateQUERY = @"UPDATE Seats SET Seat_Status = 'Resale' WHERE Seat_Number =@SeatNumber AND Match_Id = (SELECT Match_Id FROM Matches WHERE opponent =@Opponent LIMIT 1)";
 
                         using (var cmd1 = new SQLiteCommand(updateQUERY, connection, LP))
@@ -413,6 +400,7 @@ namespace OFFICIAL_NEA
                             cmd1.Parameters.AddWithValue("@Opponent", opponent);
                             cmd1.ExecuteNonQuery();
 
+                            //updates seatmap
 
                         }
 
@@ -425,6 +413,7 @@ namespace OFFICIAL_NEA
                             cmd2.Parameters.AddWithValue("@UserId", userid);
                             cmd2.ExecuteNonQuery();
 
+                            //delete ticket from user 
 
                         }
 

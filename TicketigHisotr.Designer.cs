@@ -28,36 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_Title = new System.Windows.Forms.Label();
+            this.label_HistoryInfo = new System.Windows.Forms.Label();
             this.dgv_Ticket_History = new System.Windows.Forms.DataGridView();
             this.exit_btn = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ticket_History)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label_Title
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(36, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Here is Ticket History!!";
+            this.label_Title.AutoSize = true;
+            this.label_Title.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_Title.Location = new System.Drawing.Point(36, 32);
+            this.label_Title.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label_Title.Name = "label_Title";
+            this.label_Title.Size = new System.Drawing.Size(190, 20);
+            this.label_Title.TabIndex = 0;
+            this.label_Title.Text = "Here is Ticket History!!";
             // 
-            // label2
+            // label_HistoryInfo
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(36, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(491, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "This is where you can view previous tickets you have bought:";
+            this.label_HistoryInfo.AutoSize = true;
+            this.label_HistoryInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_HistoryInfo.Location = new System.Drawing.Point(36, 52);
+            this.label_HistoryInfo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label_HistoryInfo.Name = "label_HistoryInfo";
+            this.label_HistoryInfo.Size = new System.Drawing.Size(491, 20);
+            this.label_HistoryInfo.TabIndex = 1;
+            this.label_HistoryInfo.Text = "This is where you can view previous tickets you have bought:";
             // 
             // dgv_Ticket_History
             // 
@@ -79,34 +77,21 @@
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.Image = global::OFFICIAL_NEA.Properties.Resources.arsenal_logo_arsenal_vector_png_transparent_arsenal_vector_20;
-            this.pictureBox4.Location = new System.Drawing.Point(738, 1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(141, 100);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 22;
-            this.pictureBox4.TabStop = false;
-            // 
             // TicketigHisotr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(876, 416);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.dgv_Ticket_History);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_HistoryInfo);
+            this.Controls.Add(this.label_Title);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketigHisotr";
             this.Text = "TicketigHisotr";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ticket_History)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,10 +99,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_Title;
+        private System.Windows.Forms.Label label_HistoryInfo;
         private System.Windows.Forms.DataGridView dgv_Ticket_History;
         private System.Windows.Forms.Button exit_btn;
-        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

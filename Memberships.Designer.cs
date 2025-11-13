@@ -31,25 +31,25 @@
             this.exit_btn = new System.Windows.Forms.Button();
             this.panel_currentmemembership = new System.Windows.Forms.Panel();
             this.grpbx_currentMembeships = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_PerkInfo = new System.Windows.Forms.Label();
             this.lbl_perks = new System.Windows.Forms.Label();
             this.lbl_expiry = new System.Windows.Forms.Label();
             this.lbl_currentmembership = new System.Windows.Forms.Label();
             this.label_perks = new System.Windows.Forms.Label();
             this.label_expiry = new System.Windows.Forms.Label();
             this.label_currenttier = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
             this.panel_buymemberships = new System.Windows.Forms.Panel();
             this.groupBox_membership = new System.Windows.Forms.GroupBox();
             this.btn_platinum = new System.Windows.Forms.Button();
             this.btn_gold = new System.Windows.Forms.Button();
             this.btn_silver = new System.Windows.Forms.Button();
             this.groupBox_platiunum = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_plat = new System.Windows.Forms.Label();
             this.groupBox_gold = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_Gold = new System.Windows.Forms.Label();
             this.groupBox_silver = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_silver = new System.Windows.Forms.Label();
             this.panel_currentmemembership.SuspendLayout();
             this.grpbx_currentMembeships.SuspendLayout();
             this.panel_buymemberships.SuspendLayout();
@@ -82,7 +82,7 @@
             // grpbx_currentMembeships
             // 
             this.grpbx_currentMembeships.BackColor = System.Drawing.Color.Gainsboro;
-            this.grpbx_currentMembeships.Controls.Add(this.label5);
+            this.grpbx_currentMembeships.Controls.Add(this.label_PerkInfo);
             this.grpbx_currentMembeships.Controls.Add(this.lbl_perks);
             this.grpbx_currentMembeships.Controls.Add(this.lbl_expiry);
             this.grpbx_currentMembeships.Controls.Add(this.lbl_currentmembership);
@@ -98,15 +98,15 @@
             this.grpbx_currentMembeships.Text = "Owned Memberships:";
             this.grpbx_currentMembeships.Enter += new System.EventHandler(this.grpbx_currentMembeships_Enter);
             // 
-            // label5
+            // label_PerkInfo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(402, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "-Check below to see what you get with each memberships";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label_PerkInfo.AutoSize = true;
+            this.label_PerkInfo.Location = new System.Drawing.Point(12, 115);
+            this.label_PerkInfo.Name = "label_PerkInfo";
+            this.label_PerkInfo.Size = new System.Drawing.Size(402, 16);
+            this.label_PerkInfo.TabIndex = 6;
+            this.label_PerkInfo.Text = "-Check below to see what you get with each memberships";
+            this.label_PerkInfo.Click += new System.EventHandler(this.label5_Click);
             // 
             // lbl_perks
             // 
@@ -169,16 +169,16 @@
             this.label_currenttier.Text = "Current Membership:";
             this.label_currenttier.Click += new System.EventHandler(this.label_currenttier_Click);
             // 
-            // label1
+            // lbl_Title
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(762, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Here is memberships! This is where you can view or purchase memberships from our " +
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Location = new System.Drawing.Point(20, 21);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(762, 20);
+            this.lbl_Title.TabIndex = 6;
+            this.lbl_Title.Text = "Here is memberships! This is where you can view or purchase memberships from our " +
     "selection:";
             // 
             // panel_buymemberships
@@ -242,7 +242,7 @@
             // groupBox_platiunum
             // 
             this.groupBox_platiunum.BackColor = System.Drawing.Color.Purple;
-            this.groupBox_platiunum.Controls.Add(this.label4);
+            this.groupBox_platiunum.Controls.Add(this.label_plat);
             this.groupBox_platiunum.Location = new System.Drawing.Point(505, 26);
             this.groupBox_platiunum.Name = "groupBox_platiunum";
             this.groupBox_platiunum.Size = new System.Drawing.Size(235, 118);
@@ -250,22 +250,22 @@
             this.groupBox_platiunum.TabStop = false;
             this.groupBox_platiunum.Text = "Platinum Membership";
             // 
-            // label4
+            // label_plat
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Purple;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 90);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Price : £175\r\nRequires : 300 Loyalty Points\r\nDuration: 12 months\r\nPerks:\r\n-15% di" +
+            this.label_plat.AutoSize = true;
+            this.label_plat.BackColor = System.Drawing.Color.Purple;
+            this.label_plat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_plat.Location = new System.Drawing.Point(6, 18);
+            this.label_plat.Name = "label_plat";
+            this.label_plat.Size = new System.Drawing.Size(237, 90);
+            this.label_plat.TabIndex = 1;
+            this.label_plat.Text = "Price : £175\r\nRequires : 300 Loyalty Points\r\nDuration: 12 months\r\nPerks:\r\n-15% di" +
     "count on tickets\r\n-Bonus +15 loyalty points per tickets";
             // 
             // groupBox_gold
             // 
             this.groupBox_gold.BackColor = System.Drawing.Color.Gold;
-            this.groupBox_gold.Controls.Add(this.label3);
+            this.groupBox_gold.Controls.Add(this.label_Gold);
             this.groupBox_gold.Location = new System.Drawing.Point(254, 26);
             this.groupBox_gold.Name = "groupBox_gold";
             this.groupBox_gold.Size = new System.Drawing.Size(245, 118);
@@ -273,21 +273,21 @@
             this.groupBox_gold.TabStop = false;
             this.groupBox_gold.Text = "Gold Membership";
             // 
-            // label3
+            // label_Gold
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 90);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Price : £125\r\nRequires : 200 Loyalty Points\r\nDuration: 6 months\r\nPerks:\r\n-10% dic" +
+            this.label_Gold.AutoSize = true;
+            this.label_Gold.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Gold.Location = new System.Drawing.Point(6, 18);
+            this.label_Gold.Name = "label_Gold";
+            this.label_Gold.Size = new System.Drawing.Size(237, 90);
+            this.label_Gold.TabIndex = 1;
+            this.label_Gold.Text = "Price : £125\r\nRequires : 200 Loyalty Points\r\nDuration: 6 months\r\nPerks:\r\n-10% dic" +
     "ount on tickets\r\n-Bonus +10 loyalty points per tickets";
             // 
             // groupBox_silver
             // 
             this.groupBox_silver.BackColor = System.Drawing.Color.Silver;
-            this.groupBox_silver.Controls.Add(this.label2);
+            this.groupBox_silver.Controls.Add(this.label_silver);
             this.groupBox_silver.Location = new System.Drawing.Point(0, 24);
             this.groupBox_silver.Name = "groupBox_silver";
             this.groupBox_silver.Size = new System.Drawing.Size(248, 120);
@@ -295,15 +295,15 @@
             this.groupBox_silver.TabStop = false;
             this.groupBox_silver.Text = "Silver Membership";
             // 
-            // label2
+            // label_silver
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 90);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Price : £75\r\nRequires : 100 Loyalty Points\r\nDuration: 3 months\r\nPerks:\r\n-5% dicou" +
+            this.label_silver.AutoSize = true;
+            this.label_silver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_silver.Location = new System.Drawing.Point(6, 20);
+            this.label_silver.Name = "label_silver";
+            this.label_silver.Size = new System.Drawing.Size(229, 90);
+            this.label_silver.TabIndex = 0;
+            this.label_silver.Text = "Price : £75\r\nRequires : 100 Loyalty Points\r\nDuration: 3 months\r\nPerks:\r\n-5% dicou" +
     "nt on tickets\r\n-Bonus +5 loyalty points per tickets";
             // 
             // Memberships
@@ -313,7 +313,7 @@
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel_buymemberships);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.panel_currentmemembership);
             this.Controls.Add(this.exit_btn);
             this.Name = "Memberships";
@@ -343,7 +343,7 @@
         private System.Windows.Forms.Label label_currenttier;
         private System.Windows.Forms.Label label_perks;
         private System.Windows.Forms.Label label_expiry;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Label lbl_perks;
         private System.Windows.Forms.Label lbl_expiry;
         private System.Windows.Forms.Label lbl_currentmembership;
@@ -352,12 +352,12 @@
         private System.Windows.Forms.GroupBox groupBox_platiunum;
         private System.Windows.Forms.GroupBox groupBox_gold;
         private System.Windows.Forms.GroupBox groupBox_silver;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_silver;
+        private System.Windows.Forms.Label label_plat;
+        private System.Windows.Forms.Label label_Gold;
         private System.Windows.Forms.Button btn_platinum;
         private System.Windows.Forms.Button btn_gold;
         private System.Windows.Forms.Button btn_silver;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_PerkInfo;
     }
 }

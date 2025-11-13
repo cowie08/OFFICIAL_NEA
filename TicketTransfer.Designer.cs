@@ -32,16 +32,16 @@
             this.exit_btn = new System.Windows.Forms.Button();
             this.dataGridView_usertotransfer = new System.Windows.Forms.DataGridView();
             this.grpbox_selectuser = new System.Windows.Forms.GroupBox();
-            this.grpbox = new System.Windows.Forms.GroupBox();
+            this.grpbox_selectTicket = new System.Windows.Forms.GroupBox();
             this.dataGridView_ticket = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_Title = new System.Windows.Forms.Label();
+            this.label_TransferInfo = new System.Windows.Forms.Label();
             this.resale_btn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_ResaleInfo = new System.Windows.Forms.Label();
+            this.label_KeyNote = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usertotransfer)).BeginInit();
             this.grpbox_selectuser.SuspendLayout();
-            this.grpbox.SuspendLayout();
+            this.grpbox_selectTicket.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ticket)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             // 
             this.exit_btn.BackColor = System.Drawing.Color.Red;
             this.exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit_btn.Location = new System.Drawing.Point(976, 409);
+            this.exit_btn.Location = new System.Drawing.Point(638, 400);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(232, 91);
             this.exit_btn.TabIndex = 1;
@@ -90,18 +90,18 @@
             this.grpbox_selectuser.Text = "Select a user to transfer to:";
             this.grpbox_selectuser.Enter += new System.EventHandler(this.grpbox_selectuser_Enter);
             // 
-            // grpbox
+            // grpbox_selectTicket
             // 
-            this.grpbox.BackColor = System.Drawing.Color.Gainsboro;
-            this.grpbox.Controls.Add(this.dataGridView_ticket);
-            this.grpbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbox.Location = new System.Drawing.Point(12, 90);
-            this.grpbox.Name = "grpbox";
-            this.grpbox.Size = new System.Drawing.Size(573, 240);
-            this.grpbox.TabIndex = 4;
-            this.grpbox.TabStop = false;
-            this.grpbox.Text = "Select a ticket";
-            this.grpbox.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.grpbox_selectTicket.BackColor = System.Drawing.Color.Gainsboro;
+            this.grpbox_selectTicket.Controls.Add(this.dataGridView_ticket);
+            this.grpbox_selectTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbox_selectTicket.Location = new System.Drawing.Point(12, 90);
+            this.grpbox_selectTicket.Name = "grpbox_selectTicket";
+            this.grpbox_selectTicket.Size = new System.Drawing.Size(573, 240);
+            this.grpbox_selectTicket.TabIndex = 4;
+            this.grpbox_selectTicket.TabStop = false;
+            this.grpbox_selectTicket.Text = "Select a ticket";
+            this.grpbox_selectTicket.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dataGridView_ticket
             // 
@@ -111,27 +111,27 @@
             this.dataGridView_ticket.Size = new System.Drawing.Size(552, 203);
             this.dataGridView_ticket.TabIndex = 3;
             // 
-            // label1
+            // label_Title
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Here is Ticket Transfer";
+            this.label_Title.AutoSize = true;
+            this.label_Title.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Title.Location = new System.Drawing.Point(8, 9);
+            this.label_Title.Name = "label_Title";
+            this.label_Title.Size = new System.Drawing.Size(191, 20);
+            this.label_Title.TabIndex = 5;
+            this.label_Title.Text = "Here is Ticket Transfer";
             // 
-            // label2
+            // label_TransferInfo
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(399, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "You can refund a ticket or transfer a ticket to another user";
+            this.label_TransferInfo.AutoSize = true;
+            this.label_TransferInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_TransferInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TransferInfo.Location = new System.Drawing.Point(8, 29);
+            this.label_TransferInfo.Name = "label_TransferInfo";
+            this.label_TransferInfo.Size = new System.Drawing.Size(399, 16);
+            this.label_TransferInfo.TabIndex = 6;
+            this.label_TransferInfo.Text = "You can refund a ticket or transfer a ticket to another user";
             // 
             // resale_btn
             // 
@@ -145,28 +145,28 @@
             this.resale_btn.UseVisualStyleBackColor = false;
             this.resale_btn.Click += new System.EventHandler(this.resale_btn_Click);
             // 
-            // label3
+            // label_ResaleInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1058, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "You can either click resale which will put your ticket back up for sale or click " +
+            this.label_ResaleInfo.AutoSize = true;
+            this.label_ResaleInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_ResaleInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ResaleInfo.Location = new System.Drawing.Point(8, 45);
+            this.label_ResaleInfo.Name = "label_ResaleInfo";
+            this.label_ResaleInfo.Size = new System.Drawing.Size(1058, 16);
+            this.label_ResaleInfo.TabIndex = 8;
+            this.label_ResaleInfo.Text = "You can either click resale which will put your ticket back up for sale or click " +
     "a owned ticket and a user you would wish to give a ticket to and click transfer";
             // 
-            // label4
+            // label_KeyNote
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Gainsboro;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(617, 409);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 64);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Key Note:\r\nBy Refunding a ticket you are punished \r\nby losing 70 loyalty points a" +
+            this.label_KeyNote.AutoSize = true;
+            this.label_KeyNote.BackColor = System.Drawing.Color.Gainsboro;
+            this.label_KeyNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_KeyNote.Location = new System.Drawing.Point(311, 333);
+            this.label_KeyNote.Name = "label_KeyNote";
+            this.label_KeyNote.Size = new System.Drawing.Size(297, 64);
+            this.label_KeyNote.TabIndex = 9;
+            this.label_KeyNote.Text = "Key Note:\r\nBy Refunding a ticket you are punished \r\nby losing 70 loyalty points a" +
     "s a prevention\r\nof mass Loyalty points hoarding!";
             // 
             // TicketTransfer
@@ -175,12 +175,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1220, 512);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_KeyNote);
+            this.Controls.Add(this.label_ResaleInfo);
             this.Controls.Add(this.resale_btn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.grpbox);
+            this.Controls.Add(this.label_TransferInfo);
+            this.Controls.Add(this.label_Title);
+            this.Controls.Add(this.grpbox_selectTicket);
             this.Controls.Add(this.grpbox_selectuser);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.transfer_btn);
@@ -189,7 +189,7 @@
             this.Load += new System.EventHandler(this.TicketTransfer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_usertotransfer)).EndInit();
             this.grpbox_selectuser.ResumeLayout(false);
-            this.grpbox.ResumeLayout(false);
+            this.grpbox_selectTicket.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ticket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,12 +202,12 @@
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.DataGridView dataGridView_usertotransfer;
         private System.Windows.Forms.GroupBox grpbox_selectuser;
-        private System.Windows.Forms.GroupBox grpbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox grpbox_selectTicket;
+        private System.Windows.Forms.Label label_Title;
+        private System.Windows.Forms.Label label_TransferInfo;
         private System.Windows.Forms.DataGridView dataGridView_ticket;
         private System.Windows.Forms.Button resale_btn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_ResaleInfo;
+        private System.Windows.Forms.Label label_KeyNote;
     }
 }

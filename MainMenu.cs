@@ -32,25 +32,9 @@ namespace OFFICIAL_NEA
 
         private void buyTickets_btn_Click(object sender, EventArgs e)
         {
-            int loggedInUserId = LoggedInUserId;
-
-            using (Queue queue = new Queue())
-            {
-                var result2 = queue.ShowDialog();
-
-                if (result2 == DialogResult.OK)
-                {
-                    BuyTickets buytickets = new BuyTickets(LoggedInUserId);
-                    buytickets.Show(); 
-                    this.Close();
-
-
-                }
-                else if (result2 == DialogResult.Cancel)
-                {
-                    this.Show();
-                }
-            }
+            Queue Queue = new Queue(this,LoggedInUserId);
+            this.Hide();
+            Queue.Show();
 
 
 

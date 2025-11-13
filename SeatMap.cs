@@ -29,6 +29,7 @@ namespace OFFICIAL_NEA
             this.matchid = Match_Id;
             this.userid = userid;
             this.Load += SeatMap_Load;
+            
             // checks if seatmap is displayed otherwise program will not funciton properly 
 
 
@@ -90,6 +91,7 @@ namespace OFFICIAL_NEA
 
             };
 
+           
             PanelSeats.Controls.Add(stadium);
             stadium.SendToBack();
 
@@ -234,17 +236,13 @@ namespace OFFICIAL_NEA
                 // if user tries to confirm a booking without clicking a seat 
             
             }
+
             var seatTag =(Tuple<int,decimal,string>)selectseatbtn.Tag;
             int seatId = seatTag.Item1;
             decimal seatPrice = seatTag.Item2;
             decimal discount = 0m;
             int LP_Bonus = 0;
 
-            
-
-
-
-            
             
             string connectionstring = "Data Source=../../dbfile/Football_Ticketing.db;Version=3;";
 
@@ -269,7 +267,7 @@ namespace OFFICIAL_NEA
                                 discount /= 100m;
 
 
-
+                            
                         
                         }
                     }
@@ -281,7 +279,7 @@ namespace OFFICIAL_NEA
                 if(FinalPrice < 0)
                     FinalPrice = 0;
 
-
+                // adds discount
 
 
 
@@ -305,7 +303,7 @@ namespace OFFICIAL_NEA
                         command1.Parameters.AddWithValue("@seatId", seatId);
                         command1.ExecuteNonQuery();
 
-                    //updates databse so ticket is no longer available 
+                        //updates database so ticket is no longer available 
                     
                     }
 
@@ -339,7 +337,7 @@ namespace OFFICIAL_NEA
 
                 this.Close();
 
-                // if user successfuly pruchases a ticket user is then shown back to main menu
+                // if user successfuly purchases a ticket user is then shown back to main menu
 
                 
             

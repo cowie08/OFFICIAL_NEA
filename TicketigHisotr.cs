@@ -47,7 +47,7 @@ namespace OFFICIAL_NEA
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    //colects user data like seatnum and store it in a datatable
+                    //collects user data like seatnum and store it in a datatable
 
 
                     dgv_Ticket_History.DataSource = dt;
@@ -69,7 +69,7 @@ namespace OFFICIAL_NEA
             dgv_Ticket_History.Columns["opponent"].HeaderText = "Opponent";
             dgv_Ticket_History.Columns["Date_Purchase"].HeaderText = "Purchased On";
 
-            //Tidies up the table to look nicer
+            
 
         }
 

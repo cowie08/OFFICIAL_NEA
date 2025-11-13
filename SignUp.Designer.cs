@@ -38,13 +38,13 @@
             this.signup_username_txtbox = new System.Windows.Forms.TextBox();
             this.surname_txtbox = new System.Windows.Forms.TextBox();
             this.firstname_txtbox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_confirmPassword = new System.Windows.Forms.Label();
+            this.label_password = new System.Windows.Forms.Label();
+            this.label_HomeAddress = new System.Windows.Forms.Label();
+            this.label_email = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
+            this.label_surname = new System.Windows.Forms.Label();
+            this.label_FirstName = new System.Windows.Forms.Label();
             this.signup_groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,13 +60,13 @@
             this.signup_groupBox1.Controls.Add(this.signup_username_txtbox);
             this.signup_groupBox1.Controls.Add(this.surname_txtbox);
             this.signup_groupBox1.Controls.Add(this.firstname_txtbox);
-            this.signup_groupBox1.Controls.Add(this.label7);
-            this.signup_groupBox1.Controls.Add(this.label6);
-            this.signup_groupBox1.Controls.Add(this.label5);
-            this.signup_groupBox1.Controls.Add(this.label4);
-            this.signup_groupBox1.Controls.Add(this.label3);
-            this.signup_groupBox1.Controls.Add(this.label2);
-            this.signup_groupBox1.Controls.Add(this.label1);
+            this.signup_groupBox1.Controls.Add(this.label_confirmPassword);
+            this.signup_groupBox1.Controls.Add(this.label_password);
+            this.signup_groupBox1.Controls.Add(this.label_HomeAddress);
+            this.signup_groupBox1.Controls.Add(this.label_email);
+            this.signup_groupBox1.Controls.Add(this.label_username);
+            this.signup_groupBox1.Controls.Add(this.label_surname);
+            this.signup_groupBox1.Controls.Add(this.label_FirstName);
             this.signup_groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_groupBox1.Location = new System.Drawing.Point(48, 12);
             this.signup_groupBox1.Name = "signup_groupBox1";
@@ -149,68 +149,68 @@
             this.firstname_txtbox.Size = new System.Drawing.Size(469, 25);
             this.firstname_txtbox.TabIndex = 7;
             // 
-            // label7
+            // label_confirmPassword
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 334);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 19);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "CONFIRM password";
+            this.label_confirmPassword.AutoSize = true;
+            this.label_confirmPassword.Location = new System.Drawing.Point(40, 334);
+            this.label_confirmPassword.Name = "label_confirmPassword";
+            this.label_confirmPassword.Size = new System.Drawing.Size(141, 19);
+            this.label_confirmPassword.TabIndex = 6;
+            this.label_confirmPassword.Text = "CONFIRM password";
             // 
-            // label6
+            // label_password
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 19);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Password";
+            this.label_password.AutoSize = true;
+            this.label_password.Location = new System.Drawing.Point(40, 285);
+            this.label_password.Name = "label_password";
+            this.label_password.Size = new System.Drawing.Size(73, 19);
+            this.label_password.TabIndex = 5;
+            this.label_password.Text = "Password";
             // 
-            // label5
+            // label_HomeAddress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 233);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Home Address";
+            this.label_HomeAddress.AutoSize = true;
+            this.label_HomeAddress.Location = new System.Drawing.Point(40, 233);
+            this.label_HomeAddress.Name = "label_HomeAddress";
+            this.label_HomeAddress.Size = new System.Drawing.Size(108, 19);
+            this.label_HomeAddress.TabIndex = 4;
+            this.label_HomeAddress.Text = "Home Address";
             // 
-            // label4
+            // label_email
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Email";
+            this.label_email.AutoSize = true;
+            this.label_email.Location = new System.Drawing.Point(40, 180);
+            this.label_email.Name = "label_email";
+            this.label_email.Size = new System.Drawing.Size(45, 19);
+            this.label_email.TabIndex = 3;
+            this.label_email.Text = "Email";
             // 
-            // label3
+            // label_username
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Username";
+            this.label_username.AutoSize = true;
+            this.label_username.Location = new System.Drawing.Point(40, 134);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(76, 19);
+            this.label_username.TabIndex = 2;
+            this.label_username.Text = "Username";
             // 
-            // label2
+            // label_surname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Surname";
+            this.label_surname.AutoSize = true;
+            this.label_surname.Location = new System.Drawing.Point(40, 86);
+            this.label_surname.Name = "label_surname";
+            this.label_surname.Size = new System.Drawing.Size(68, 19);
+            this.label_surname.TabIndex = 1;
+            this.label_surname.Text = "Surname";
             // 
-            // label1
+            // label_FirstName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First Name";
+            this.label_FirstName.AutoSize = true;
+            this.label_FirstName.Location = new System.Drawing.Point(40, 39);
+            this.label_FirstName.Name = "label_FirstName";
+            this.label_FirstName.Size = new System.Drawing.Size(81, 19);
+            this.label_FirstName.TabIndex = 0;
+            this.label_FirstName.Text = "First Name";
             // 
             // SignUp
             // 
@@ -230,13 +230,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox signup_groupBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_confirmPassword;
+        private System.Windows.Forms.Label label_password;
+        private System.Windows.Forms.Label label_HomeAddress;
+        private System.Windows.Forms.Label label_email;
+        private System.Windows.Forms.Label label_username;
+        private System.Windows.Forms.Label label_surname;
+        private System.Windows.Forms.Label label_FirstName;
         private System.Windows.Forms.TextBox confirmpassword_txtbox;
         private System.Windows.Forms.TextBox signup_password_txtbox;
         private System.Windows.Forms.TextBox homeAddress_txtbox;

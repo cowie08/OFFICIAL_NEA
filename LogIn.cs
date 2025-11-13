@@ -52,14 +52,14 @@ namespace OFFICIAL_NEA
             
                 connection.Open();
 
-                string query = "SELECT User_Id FROM Users WHERE Username=@uname AND password_hash=@pass";
+                string query = "SELECT User_Id FROM Users WHERE Username= @username AND password_hash=@password";
 
                 using(SQLiteCommand  cmd = new SQLiteCommand(query,connection)) 
                 {
-                    cmd.Parameters.AddWithValue("@uname",username);
-                    cmd.Parameters.AddWithValue("@pass", password_Hash);
+                    cmd.Parameters.AddWithValue("@username",username);
+                    cmd.Parameters.AddWithValue("@password", password_Hash);
 
-
+                    //add user to users table
 
                     object result = cmd.ExecuteScalar();
                     
@@ -71,24 +71,10 @@ namespace OFFICIAL_NEA
                         int LoggedInUserId = Convert.ToInt32(result);
                         MessageBox.Show("Successfull Log In!");
 
-
-                        using (Queue queue = new Queue())
-                        {
-                            var result2 = queue.ShowDialog();
-
-                            if (result2 == DialogResult.OK)
-                            {
-                                MainMenu mainMenu = new MainMenu(LoggedInUserId);
-                                mainMenu.Show();
-                                this.Close();
-
-
-                            }
-                            else if (result2 == DialogResult.Cancel)
-                            {
-                                this.Show();
-                            }
-                        }
+                        Queue queue = new Queue(this,LoggedInUserId);
+                        this.Close();
+                        queue.Show();
+                        
 
 
                       
@@ -98,8 +84,9 @@ namespace OFFICIAL_NEA
 
                     else 
                     {
-                        MessageBox.Show("Invalid Log In (TRY AGAIN)");
-                        // user has not enter correct or valid detials
+                        MessageBox.Show("Invalid Log In details!");
+                        
+                            // user has not entered correct or valid details
 
                     }
 
