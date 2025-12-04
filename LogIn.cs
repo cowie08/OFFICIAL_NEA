@@ -72,9 +72,9 @@ namespace OFFICIAL_NEA
                         MessageBox.Show("Successfull Log In!");
 
                         Queue queue = new Queue(this,LoggedInUserId);
-                        this.Close();
-                        queue.Show();
                         
+                        queue.Show();
+                        this.Close();
 
 
                       

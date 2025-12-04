@@ -326,7 +326,7 @@ namespace OFFICIAL_NEA
 
 
                             label_currenttier.Text = $"Current Membership: {tierDisplay}";
-                            lbl_expiry.Text = $"Expire on: "+endDate+":dd MMM yyyy}";
+                            lbl_expiry.Text = $"Expire on: "+endDate+" ";
 
                             Color lbltiercolour;
                             switch (tier.ToLower()) 

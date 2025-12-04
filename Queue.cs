@@ -64,7 +64,9 @@ namespace OFFICIAL_NEA
             
             timer1.Stop();
             this.Close();
-            prevForm.Show();
+            LogIn logIn = new LogIn();
+            logIn.Show();
+            
 
 
             //ext btn (if user clicks exit timer cancels and queue is not passed)
@@ -89,6 +91,10 @@ namespace OFFICIAL_NEA
 
                 lbl_queue.Text = "Queue has been passed... You are not being relocated!";
                 System.Threading.Thread.Sleep(500);
+
+
+               
+
 
                 var main = new MainMenu(userId);
                 main.Show();

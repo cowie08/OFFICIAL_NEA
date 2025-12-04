@@ -32,12 +32,12 @@ namespace OFFICIAL_NEA
 
         private void buyTickets_btn_Click(object sender, EventArgs e)
         {
-            Queue Queue = new Queue(this,LoggedInUserId);
-            this.Hide();
-            Queue.Show();
+            BuyTickets buyTickets = new BuyTickets(LoggedInUserId);
+            buyTickets.Show();
+            this.Close();
 
 
-
+            
            
 
             //allows user access to buy tickets

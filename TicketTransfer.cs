@@ -224,8 +224,19 @@ namespace OFFICIAL_NEA
             }
 
 
+            if (dataGridView_ticket.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Only transfer 1 ticket at a time!");
+                return;
+            
+            }
 
+            if (dataGridView_usertotransfer.SelectedRows.Count > 1)
+            {
+                MessageBox.Show("Only transfer 1 ticket at a time!");
+                return ;
 
+            }
 
 
 
@@ -274,7 +285,7 @@ namespace OFFICIAL_NEA
                     ticketId = Convert.ToInt32(result);
 
 
-                    // cant transfer same tikcet multiple times 
+                    // cant transfer same ticKet multiple times 
                 }
 
 
