@@ -291,7 +291,18 @@ namespace OFFICIAL_NEA
 
 
 
+                string deleteTicket_QUERY = @"DELETE FROM Tickets WHERE Seat_Id = (SELECT Seat_Id FROM Seats WHERE Seat_Number = @SeatNumber AND Match_Id = (SELECT Match_Id FROM Matches WHERE opponent = @Opponent LIMIT 1)) AND User_Id = @UserId;";
 
+                using (var cmd2 = new SQLiteCommand(deleteTicket_QUERY, connection))
+                {
+                    cmd2.Parameters.AddWithValue("@SeatNumber", seatNum);
+                    cmd2.Parameters.AddWithValue("@Opponent", opponent);
+                    cmd2.Parameters.AddWithValue("@UserId", userid);
+                    cmd2.ExecuteNonQuery();
+
+                    //delete ticket from user 
+
+                }
 
 
 
