@@ -152,29 +152,7 @@ namespace OFFICIAL_NEA
                 
                 }
 
-                if (selectedtier > currentRank)
-                {
-                    var result = MessageBox.Show("You are about to upgrade from "+currentTier+" to "+membership_name+". Do you want to confirm?", "CONFIRM UPGRADE", MessageBoxButtons.YesNo);
-                    if (result != DialogResult.Yes)
-                    {
-                        return;
-                    }
-
-
-                }
-
-
-                if (selectedtier < currentRank)
-                {
-                    var result = MessageBox.Show("You are about to downgrade from "+currentTier+" to "+membership_name+". Do you want to confirm?", "CONFIRM DOWNGRADE", MessageBoxButtons.YesNo);
-                    if (result != DialogResult.Yes)
-                    {
-                        return;
-                    }
                 
-                
-                }
-
 
                 // current query used to check the user current membership 
 
@@ -220,6 +198,30 @@ namespace OFFICIAL_NEA
                                     MessageBox.Show("You do not have the required loyalty points to buy this membership");
                                     return;
                                 }
+
+                                if (selectedtier > currentRank)
+                                {
+                                    var result = MessageBox.Show("You are about to upgrade from " + currentTier + " to " + membership_name + ". Do you want to confirm?", "CONFIRM UPGRADE", MessageBoxButtons.YesNo);
+                                    if (result != DialogResult.Yes)
+                                    {
+                                        return;
+                                    }
+
+
+                                }
+
+
+                                if (selectedtier < currentRank)
+                                {
+                                    var result = MessageBox.Show("You are about to downgrade from " + currentTier + " to " + membership_name + ". Do you want to confirm?", "CONFIRM DOWNGRADE", MessageBoxButtons.YesNo);
+                                    if (result != DialogResult.Yes)
+                                    {
+                                        return;
+                                    }
+
+
+                                }
+
 
                                 DateTime startdate = DateTime.Now;
                                 DateTime endDate = startdate.AddDays(duration);
