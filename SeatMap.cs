@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace OFFICIAL_NEA
 {
@@ -17,17 +18,19 @@ namespace OFFICIAL_NEA
         private int matchid;
         private int userid;
         private Button selectseatbtn = null;
+        private DateTime matchDate;
         public SeatMap()
         {
             InitializeComponent();
 
         }
 
-        public SeatMap(int Match_Id,int userid)
+        public SeatMap(int Match_Id,int userid,DateTime Match_Date)
         {
             InitializeComponent();
             this.matchid = Match_Id;
             this.userid = userid;
+            this.matchDate = Match_Date;
             this.Load += SeatMap_Load;
             
             // checks if seatmap is displayed otherwise program will not funciton properly 
@@ -318,11 +321,16 @@ namespace OFFICIAL_NEA
 
                 }
 
+                if (matchDate < DateTime.Now.Date)
+                {
+                    MessageBox.Show("Match has already been played (ticket expired) ");
+                    return;
+                
+                
+                }
+                
 
 
-
-
-            
 
 
                 MessageBox.Show($"Completed ticket purchase!\n Seat: {selectseatbtn.Text}\n Original Price: £{seatPrice} \n Discount: {(discount * 100)}% \n Final Price: £{FinalPrice} \n Loyalty points earned: {LP_earned}!! ");

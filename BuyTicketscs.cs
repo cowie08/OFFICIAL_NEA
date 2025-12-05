@@ -106,7 +106,9 @@ namespace OFFICIAL_NEA
             {
                 int loggedINUSerId = loggedInUserId;
                 int Match_Id = Convert.ToInt32(dataGridView_matches.SelectedRows[0].Cells["Match_Id"].Value);
-                SeatMap seatMap = new SeatMap(Match_Id,loggedINUSerId);
+                DateTime Match_Date = Convert.ToDateTime(dataGridView_matches.SelectedRows[0].Cells["Match_Date"].Value);
+
+                SeatMap seatMap = new SeatMap(Match_Id,loggedINUSerId,Match_Date);
                 seatMap.Show();
                 this.Close();
 
