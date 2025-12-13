@@ -393,5 +393,10 @@ namespace OFFICIAL_NEA
         {
 
         }
+
+        private void label_silver_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

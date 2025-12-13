@@ -259,8 +259,8 @@
             this.label_plat.Name = "label_plat";
             this.label_plat.Size = new System.Drawing.Size(237, 90);
             this.label_plat.TabIndex = 1;
-            this.label_plat.Text = "Price : £175\r\nRequires : 300 Loyalty Points\r\nDuration: 12 months\r\nPerks:\r\n-15% di" +
-    "count on tickets\r\n-Bonus +15 loyalty points per tickets";
+            this.label_plat.Text = "Price : £175\r\nRequires : 300 Loyalty Points\r\nDuration: 300 Days\r\nPerks:\r\n-15% dic" +
+    "ount on tickets\r\n-Bonus +15 loyalty points per tickets";
             // 
             // groupBox_gold
             // 
@@ -281,7 +281,7 @@
             this.label_Gold.Name = "label_Gold";
             this.label_Gold.Size = new System.Drawing.Size(237, 90);
             this.label_Gold.TabIndex = 1;
-            this.label_Gold.Text = "Price : £125\r\nRequires : 200 Loyalty Points\r\nDuration: 6 months\r\nPerks:\r\n-10% dic" +
+            this.label_Gold.Text = "Price : £125\r\nRequires : 200 Loyalty Points\r\nDuration: 180 Days\r\nPerks:\r\n-10% dic" +
     "ount on tickets\r\n-Bonus +10 loyalty points per tickets";
             // 
             // groupBox_silver
@@ -303,8 +303,9 @@
             this.label_silver.Name = "label_silver";
             this.label_silver.Size = new System.Drawing.Size(229, 90);
             this.label_silver.TabIndex = 0;
-            this.label_silver.Text = "Price : £75\r\nRequires : 100 Loyalty Points\r\nDuration: 3 months\r\nPerks:\r\n-5% dicou" +
-    "nt on tickets\r\n-Bonus +5 loyalty points per tickets";
+            this.label_silver.Text = "Price : £75\r\nRequires : 100 Loyalty Points\r\nDuration: 90 Days\r\nPerks:\r\n-5% dicoun" +
+    "t on tickets\r\n-Bonus +5 loyalty points per tickets";
+            this.label_silver.Click += new System.EventHandler(this.label_silver_Click);
             // 
             // Memberships
             // 

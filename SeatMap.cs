@@ -230,6 +230,15 @@ namespace OFFICIAL_NEA
 
         private void confirmseat_btn_Click(object sender, EventArgs e)
         {
+            if (matchDate < DateTime.Now.Date)
+            {
+                MessageBox.Show("Match has already been played (ticket expired) ");
+                return;
+
+
+            }
+
+
 
             if (selectseatbtn == null)
             {
@@ -321,13 +330,7 @@ namespace OFFICIAL_NEA
 
                 }
 
-                if (matchDate < DateTime.Now.Date)
-                {
-                    MessageBox.Show("Match has already been played (ticket expired) ");
-                    return;
                 
-                
-                }
                 
 
 
